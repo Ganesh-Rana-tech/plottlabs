@@ -93,9 +93,9 @@ const Navbar = () => {
 
   const navigation = [
     { name: "OneNet Cloud", href: "/onenet" },
-    { name: "Industries", href: "/industries" },
+    // { name: "Industries", href: "/industries" },
     { name: "Case Studies", href: "/case-studies" },
-    { name: "Resources", href: "/resources" },
+    // { name: "Resources", href: "/resources" },
     { name: "Pricing", href: "/pricing" },
   ];
 
