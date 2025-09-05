@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Plott Labs Website
+
+A modern, enterprise-grade website built with Next.js 14, TypeScript, Tailwind CSS, and shadcn/ui components. This website showcases Plott Labs' incident response platform including CAD, Map, Mobile, and Analytics solutions.
+
+## Features
+
+- **Modern Tech Stack**: Next.js 14 with App Router, TypeScript, Tailwind CSS
+- **Enterprise Design**: Clean, professional design inspired by modern SaaS platforms
+- **Responsive**: Fully responsive design optimized for all device sizes
+- **Component Library**: Built with shadcn/ui for consistent, accessible components
+- **SEO Optimized**: Proper meta tags and structured content
+- **Performance**: Optimized for Core Web Vitals and fast loading times
+
+## Pages Structure
+
+- **Homepage** (`/`) - Hero section, value propositions, platform overview
+- **Solutions** (`/solutions`) - Overview of all four core tools
+  - **CAD** (`/solutions/cad`) - Computer-Aided Dispatch details
+  - **Map** (`/solutions/map`) - Mapping application features
+  - **Mobile** (`/solutions/mobile`) - Mobile app capabilities
+  - **Analytics** (`/solutions/analytics`) - Reporting and analytics
+- **About** (`/about`) - Company mission, values, and story
+- **Pricing** (`/pricing`) - Flexible SaaS pricing tiers
+- **Contact** (`/contact`) - Demo request form and contact information
+- **OneNet** (`/onenet`) - OneNet Incident Response Cloud
+- **Industries** (`/industries`) - Target industries and use cases
+- **Case Studies** (`/case-studies`) - Success stories and testimonials
+- **Resources** (`/resources`) - Blog posts, whitepapers, and videos
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18.0 or later
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd plott-labs-website
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Learn More
+## Development
 
-To learn more about Next.js, take a look at the following resources:
+### Available Scripts
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Project Structure
 
-## Deploy on Vercel
+```
+src/
+├── app/                 # Next.js App Router pages
+│   ├── api/            # API routes
+│   ├── about/          # About page
+│   ├── contact/        # Contact/demo page
+│   ├── pricing/        # Pricing page
+│   ├── solutions/      # Solutions pages
+│   └── ...
+├── components/         # React components
+│   ├── ui/            # shadcn/ui components
+│   ├── layout/        # Layout components
+│   ├── sections/      # Page sections
+│   └── forms/         # Form components
+├── lib/               # Utility functions
+├── types/             # TypeScript type definitions
+├── data/              # Static data
+└── hooks/             # Custom React hooks
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Styling
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project uses Tailwind CSS for styling with a custom design system based on the shadcn/ui color palette. The design follows modern enterprise SaaS aesthetics with:
+
+- Gradient text treatments
+- Glass morphism effects
+- Consistent spacing and typography
+- Accessible color contrasts
+- Responsive breakpoints
+
+### Components
+
+The project uses shadcn/ui components for consistency and accessibility:
+
+- **Button** - Various button styles and sizes
+- **Card** - Content containers with headers and footers
+- **Input** - Form input fields
+- **Navigation** - Mobile-responsive navbar
+
+## Deployment
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Environment Variables
+
+Create a `.env.local` file for environment-specific configurations:
+
+```
+NEXT_PUBLIC_SITE_URL=https://your-domain.com
+CONTACT_EMAIL=your-contact@email.com
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## License
+
+This project is proprietary software owned by Plott Labs.
+
+## Support
+
+For technical support or questions about this website, please contact the development team.
+# plottlabs
