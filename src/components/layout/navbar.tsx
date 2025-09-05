@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Shield, MapPin, Smartphone, BarChart3 } from "lucide-react";
@@ -79,9 +80,16 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link href="/" className="flex-shrink-0">
-              <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                Plott Labs
+            <Link href="/" className="flex-shrink-0 flex items-center space-x-2 hover:opacity-80 transition-opacity">
+              <div className="relative">
+                <Image
+                  src="/images/logos/plottlabs-logo.png"
+                  alt="Plott Labs"
+                  width={140}
+                  height={32}
+                  className="h-8 w-auto object-contain"
+                  priority
+                />
               </div>
             </Link>
           </div>
