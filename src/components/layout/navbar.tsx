@@ -4,12 +4,14 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Shield, MapPin, Smartphone, BarChart3 } from "lucide-react";
+import { Menu, X, ChevronDown, Shield, MapPin, Smartphone, BarChart3, Users, Clock, Award, CheckCircle } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const solutions = [
     {
@@ -46,13 +48,55 @@ const Navbar = () => {
     }
   ];
 
+  const aboutMenuItems = [
+    {
+      name: "Company Overview",
+      title: "Company Overview",
+      description: "Mission, Story, and Core Values",
+      href: "/about",
+      icon: Users,
+      color: "blue"
+    },
+    {
+      name: "Leadership",
+      title: "Leadership",
+      description: "Meet our expert leadership team",
+      href: "/about#leadership",
+      icon: Users,
+      color: "purple"
+    },
+    {
+      name: "Innovation Timeline",
+      title: "Innovation Timeline",
+      description: "Our journey of continuous innovation",
+      href: "/about#timeline",
+      icon: Clock,
+      color: "cyan"
+    },
+    {
+      name: "Certifications & Trust",
+      title: "Certifications & Trust",
+      description: "Security standards and compliance",
+      href: "/about#certifications",
+      icon: Award,
+      color: "green"
+    },
+    {
+      name: "Why Plott Labs",
+      title: "Why Plott Labs",
+      description: "Compare us to legacy systems",
+      href: "/about#comparison",
+      icon: CheckCircle,
+      color: "blue"
+    }
+  ];
+
   const navigation = [
     { name: "OneNet Cloud", href: "/onenet" },
     { name: "Industries", href: "/industries" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Resources", href: "/resources" },
     { name: "Pricing", href: "/pricing" },
-    { name: "About", href: "/about" },
   ];
 
   const getIconColorClass = (color: string) => {
@@ -89,11 +133,28 @@ const Navbar = () => {
     }, 150); // Small delay to prevent flickering
   };
 
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeoutRef.current) {
+      clearTimeout(aboutTimeoutRef.current);
+      aboutTimeoutRef.current = null;
+    }
+    setIsAboutOpen(true);
+  };
+
+  const handleAboutMouseLeave = () => {
+    aboutTimeoutRef.current = setTimeout(() => {
+      setIsAboutOpen(false);
+    }, 150); // Small delay to prevent flickering
+  };
+
   // Cleanup timeout on unmount
   useEffect(() => {
     return () => {
       if (timeoutRef.current) {
         clearTimeout(timeoutRef.current);
+      }
+      if (aboutTimeoutRef.current) {
+        clearTimeout(aboutTimeoutRef.current);
       }
     };
   }, []);
@@ -157,6 +218,53 @@ const Navbar = () => {
                                 </div>
                                 <div className="text-xs text-gray-500 mt-1 line-clamp-2">
                                   {solution.description}
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* About Dropdown */}
+              <div 
+                className="relative group"
+                onMouseEnter={handleAboutMouseEnter}
+                onMouseLeave={handleAboutMouseLeave}
+              >
+                <Link 
+                  href="/about"
+                  className="text-muted-foreground hover:text-foreground px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center space-x-1"
+                >
+                  <span>About</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform ${isAboutOpen ? 'rotate-180' : ''}`} />
+                </Link>
+                
+                {/* Dropdown Menu */}
+                {isAboutOpen && (
+                  <div className="absolute top-full left-0 w-80 bg-white rounded-lg shadow-xl border border-gray-200 py-2 z-50">
+                    <div className="px-4 py-2">
+                      <div className="grid grid-cols-1 gap-1">
+                        {aboutMenuItems.map((item) => {
+                          const Icon = item.icon;
+                          return (
+                            <Link
+                              key={item.name}
+                              href={item.href}
+                              className="flex items-start space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-colors group/item"
+                            >
+                              <div className={`w-10 h-10 ${getBgColorClass(item.color)} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                                <Icon className={`w-5 h-5 ${getIconColorClass(item.color)}`} />
+                              </div>
+                              <div className="flex-1">
+                                <div className="text-sm font-semibold text-gray-900 group-hover/item:text-gray-900">
+                                  {item.title}
+                                </div>
+                                <div className="text-xs text-gray-500 mt-1 line-clamp-2">
+                                  {item.description}
                                 </div>
                               </div>
                             </Link>
@@ -232,6 +340,27 @@ const Navbar = () => {
               >
                 View All Solutions
               </Link>
+            </div>
+
+            {/* Mobile About Menu */}
+            <div className="space-y-1">
+              <div className="px-3 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                About
+              </div>
+              {aboutMenuItems.map((item) => {
+                const Icon = item.icon;
+                return (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    className="flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    <Icon className={`w-4 h-4 ${getIconColorClass(item.color)}`} />
+                    <span>{item.title}</span>
+                  </Link>
+                );
+              })}
             </div>
 
             {/* Other Mobile Navigation */}
