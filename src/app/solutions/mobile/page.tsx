@@ -1,91 +1,192 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Smartphone, RefreshCw, Wifi, WifiOff, Shield, CheckCircle, Download, Zap } from "lucide-react";
+import { Metadata } from 'next'
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { 
+  Smartphone, 
+  Shield, 
+  Zap, 
+  Users, 
+  MapPin, 
+  Bell, 
+  Battery, 
+  Wifi,
+  Signal,
+  Calendar,
+  MessageSquare,
+  Camera,
+  Mic,
+  Navigation,
+  Clock,
+  CheckCircle
+} from "lucide-react"
+
+export const metadata: Metadata = {
+  title: 'Mobile Application Solutions | Plott Labs - Field Operations & Emergency Response',
+  description: 'Advanced mobile applications for first responders, field operations, and emergency management. Real-time communication, GPS tracking, and offline capabilities.',
+  keywords: 'mobile app, first responder app, field operations, emergency response, GPS tracking, offline mobile, public safety mobile',
+  openGraph: {
+    title: 'Mobile Application Solutions | Plott Labs',
+    description: 'Advanced mobile applications for first responders, field operations, and emergency management.',
+    type: 'website',
+  },
+}
 
 export default function MobilePage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-cyan-50 to-cyan-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-cyan-600 rounded-2xl flex items-center justify-center mr-4">
-                  <Smartphone className="w-8 h-8 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-4xl md:text-5xl font-bold text-gray-900">
-                    Mobile Application
-                  </h1>
-                  <p className="text-xl text-cyan-600 mt-2">Extend CAD & Map to Responders in the Field</p>
-                </div>
+      <section className="relative min-h-[80vh] flex items-center justify-center gradient-mesh animate-rotate-gradient overflow-hidden">
+        {/* Animated Background Elements */}
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
+
+        {/* Floating Particles */}
+        <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-2 h-2 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-60 right-40 w-3 h-3 bg-pink-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute bottom-40 right-60 w-4 h-4 bg-green-400/60 rounded-full animate-particle-float delay-300"></div>
+
+        {/* Main gradient orbs */}
+        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center z-10">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="lg:text-left">
+              <div className="mb-6 animate-fade-in-up">
+                <Badge variant="outline" className="glass border-white/20 text-cyan-300 hover:bg-white/10 mb-4">
+                  <Smartphone className="w-4 h-4 mr-2" />
+                  Mobile Solutions
+                </Badge>
               </div>
               
-              <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Empower your field personnel with seamless access to CAD and Map functionality through our 
-                device-agnostic mobile platform that ensures real-time synchronization and offline capability.
+              <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in-up delay-200">
+                <span className="text-white drop-shadow-2xl">
+                  Field Operations in Your
+                </span>
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                  Pocket
+                </span>
+              </h1>
+              
+              <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl animate-fade-in-up delay-500 drop-shadow-lg">
+                Empower your field teams with advanced mobile applications designed for 
+                first responders, emergency management, and critical operations. 
+                Real-time communication, offline capabilities, and intuitive interfaces 
+                built for high-stakes environments.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <Button size="lg" className="bg-cyan-600 hover:bg-cyan-700">
-                  <Link href="/contact">Discover Mobile Access</Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-start mb-8 animate-fade-in-up delay-700">
+                <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
+                  Request Demo
                 </Button>
-                <Button size="lg" variant="outline" className="border-cyan-600 text-cyan-600 hover:bg-cyan-50">
-                  <Link href="/solutions">View Platform Overview</Link>
+                <Button size="lg" variant="outline" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+                  View Features
                 </Button>
               </div>
 
-              <div className="flex items-center space-x-6 text-sm text-gray-600">
+              <div className="flex items-center space-x-8 text-gray-300 justify-start animate-fade-in-up delay-1000">
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>Device-Agnostic</span>
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>iOS & Android</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
+                  <CheckCircle className="w-5 h-5 text-green-400" />
+                  <span>Offline Capable</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-green-400" />
                   <span>Real-time Sync</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-4 h-4 text-green-600" />
-                  <span>Offline Ready</span>
                 </div>
               </div>
             </div>
 
-            <div className="lg:order-last flex justify-center">
-              <div className="relative">
-                {/* Phone mockup */}
-                <div className="w-64 h-[500px] bg-gray-900 rounded-[2.5rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-[2rem] flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-blue-600/10"></div>
-                    <div className="relative z-10 text-center p-6">
-                      <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-r from-cyan-600 to-cyan-700 rounded-2xl flex items-center justify-center shadow-lg">
-                        <Smartphone className="w-8 h-8 text-white" />
+            {/* Mobile Device Mockup */}
+            <div className="relative animate-scale-in delay-1000">
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl">
+                <div className="relative w-80 h-[640px] mx-auto">
+                  {/* Outer Frame */}
+                  <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900 rounded-[3rem] shadow-2xl">
+                    {/* Screen */}
+                    <div className="absolute inset-4 bg-gradient-to-b from-slate-900 via-blue-950 to-slate-900 rounded-[2.5rem] overflow-hidden">
+                      {/* Status Bar */}
+                      <div className="flex justify-between items-center px-6 py-3 text-white text-sm">
+                        <span className="font-medium">9:41 AM</span>
+                        <div className="flex items-center space-x-1">
+                          <Signal className="w-4 h-4" />
+                          <Wifi className="w-4 h-4" />
+                          <Battery className="w-4 h-4" />
+                        </div>
                       </div>
-                      <p className="text-lg font-bold text-cyan-900 mb-2">Mobile Interface</p>
-                      <p className="text-sm text-cyan-700 mb-4">Field Access Portal</p>
-                      <div className="space-y-2">
-                        <div className="bg-white/80 rounded-lg p-2">
-                          <div className="text-xs font-medium text-gray-800">Active Incidents: 3</div>
+                      
+                      {/* App Interface */}
+                      <div className="px-4 pb-4 h-full">
+                        {/* Header */}
+                        <div className="glass border border-white/10 rounded-2xl p-4 mb-4 hover:shadow-xl transition-all duration-300">
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="text-white font-semibold">Emergency Dispatch</h3>
+                            <Badge className="bg-red-500/20 text-red-300 border-red-400/30">
+                              Active
+                            </Badge>
+                          </div>
+                          <div className="flex items-center space-x-3 text-sm text-gray-300">
+                            <div className="flex items-center space-x-1">
+                              <MapPin className="w-4 h-4 text-blue-400" />
+                              <span>Downtown District</span>
+                            </div>
+                            <div className="flex items-center space-x-1">
+                              <Clock className="w-4 h-4 text-green-400" />
+                              <span>2 min ago</span>
+                            </div>
+                          </div>
                         </div>
-                        <div className="bg-white/80 rounded-lg p-2">
-                          <div className="text-xs font-medium text-gray-800">Unit Status: Available</div>
+
+                        {/* Map Preview */}
+                        <div className="glass border border-white/10 rounded-2xl p-4 mb-4 relative h-40 overflow-hidden hover:shadow-xl transition-all duration-300">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl">
+                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
+                            {/* Simulated Map Points */}
+                            <div className="absolute top-6 left-8 w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
+                            <div className="absolute top-12 right-12 w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-300"></div>
+                            <div className="absolute bottom-8 left-16 w-2 h-2 bg-green-400 rounded-full animate-pulse delay-500"></div>
+                            <div className="text-center pt-16 relative z-10">
+                              <MapPin className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+                              <p className="text-gray-300 text-sm">Live Incident Map</p>
+                            </div>
+                          </div>
                         </div>
-                        <div className="bg-white/80 rounded-lg p-2">
-                          <div className="text-xs font-medium text-gray-800">GPS: Connected</div>
+
+                        {/* Action Buttons */}
+                        <div className="grid grid-cols-2 gap-3">
+                          <Button className="glass border-green-400/30 text-green-300 hover:bg-green-400/10 w-full hover:scale-105 transition-all duration-300">
+                            <MessageSquare className="w-4 h-4 mr-2" />
+                            Respond
+                          </Button>
+                          <Button className="glass border-orange-400/30 text-orange-300 hover:bg-orange-400/10 w-full hover:scale-105 transition-all duration-300">
+                            <Navigation className="w-4 h-4 mr-2" />
+                            Navigate
+                          </Button>
                         </div>
                       </div>
                     </div>
                   </div>
+                  
+                  {/* Home Indicator */}
+                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-slate-600 rounded-full"></div>
                 </div>
-                
-                {/* Floating indicators */}
-                <div className="absolute -top-4 -right-4 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg">
-                  <Wifi className="w-4 h-4 text-white" />
+
+                {/* Floating Icons */}
+                <div className="absolute -top-4 -left-8 glass border border-white/10 p-3 rounded-2xl animate-float hover:scale-110 transition-transform duration-300">
+                  <Bell className="w-6 h-6 text-blue-400" />
                 </div>
-                <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg">
-                  <RefreshCw className="w-4 h-4 text-white" />
+                <div className="absolute top-20 -right-8 glass border border-white/10 p-3 rounded-2xl animate-float delay-300 hover:scale-110 transition-transform duration-300">
+                  <Camera className="w-6 h-6 text-purple-400" />
+                </div>
+                <div className="absolute -bottom-8 -left-4 glass border border-white/10 p-3 rounded-2xl animate-float delay-500 hover:scale-110 transition-transform duration-300">
+                  <Mic className="w-6 h-6 text-green-400" />
                 </div>
               </div>
             </div>
@@ -93,305 +194,164 @@ export default function MobilePage() {
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Comprehensive Mobile Capabilities</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Our mobile platform brings the full power of your dispatch system to field personnel, 
-              ensuring seamless operations regardless of location or connectivity.
+      {/* Key Features Section */}
+      <section className="py-24 gradient-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+
+        {/* Background particles */}
+        <div className="absolute top-40 left-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float"></div>
+        <div className="absolute bottom-32 right-32 w-3 h-3 bg-purple-400/40 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-cyan-400/40 rounded-full animate-particle-float delay-500"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="text-center mb-20 animate-fade-in-up">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+              Built for Critical
+              <br />
+              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                Operations
+              </span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              Every feature designed with the unique challenges of emergency response, 
+              public safety, and field operations in mind.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <Smartphone className="w-6 h-6 text-cyan-600" />
+            {[
+              {
+                icon: Shield,
+                title: "Secure Communications",
+                description: "End-to-end encrypted messaging, voice calls, and data transmission. FIPS 140-2 compliant security standards.",
+                color: "blue",
+                delay: "delay-100"
+              },
+              {
+                icon: Zap,
+                title: "Real-time Updates", 
+                description: "Instant incident notifications, status updates, and resource tracking. Push notifications with priority levels.",
+                color: "purple",
+                delay: "delay-200"
+              },
+              {
+                icon: MapPin,
+                title: "GPS & Location Services",
+                description: "Precise positioning, geofencing, breadcrumb trails, and location sharing. Works with enhanced 911 systems.",
+                color: "green",
+                delay: "delay-300"
+              },
+              {
+                icon: Users,
+                title: "Team Coordination",
+                description: "Unit status, resource allocation, task assignment, and team chat. Hierarchical command structure support.",
+                color: "orange",
+                delay: "delay-400"
+              },
+              {
+                icon: Calendar,
+                title: "Offline Capability",
+                description: "Full functionality without network coverage. Automatic sync when connection is restored.",
+                color: "indigo",
+                delay: "delay-500"
+              },
+              {
+                icon: Bell,
+                title: "Smart Notifications",
+                description: "Priority-based alerts, customizable notification sounds, and Do Not Disturb scheduling.",
+                color: "cyan",
+                delay: "delay-700"
+              }
+            ].map((feature, index) => (
+              <div key={index} className={`glass border border-white/10 rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up ${feature.delay} group relative overflow-hidden`}>
+                <div className={`absolute inset-0 bg-gradient-to-br from-${feature.color}-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                <div className="relative z-10">
+                  <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-${feature.color}-500/20 to-${feature.color}-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow`}>
+                    <feature.icon className={`w-8 h-8 text-${feature.color}-400 group-hover:animate-pulse`} />
+                  </div>
+                  <h3 className={`text-xl font-bold text-white mb-3 group-hover:text-${feature.color}-400 transition-colors duration-300`}>{feature.title}</h3>
+                  <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300">{feature.description}</p>
                 </div>
-                <CardTitle className="text-cyan-900">Device-Agnostic Design</CardTitle>
-                <CardDescription>
-                  Works seamlessly across iOS, Android, tablets, and ruggedized devices used in the field.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Cross-platform compatibility</li>
-                  <li>• Responsive interface design</li>
-                  <li>• Support for ruggedized devices</li>
-                  <li>• Touch-optimized controls</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <RefreshCw className="w-6 h-6 text-cyan-600" />
-                </div>
-                <CardTitle className="text-cyan-900">Real-Time CAD Synchronization</CardTitle>
-                <CardDescription>
-                  Instant synchronization with your CAD system for real-time incident updates and status changes.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Live incident notifications</li>
-                  <li>• Status update capabilities</li>
-                  <li>• Automatic data refresh</li>
-                  <li>• Bidirectional communication</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <WifiOff className="w-6 h-6 text-cyan-600" />
-                </div>
-                <CardTitle className="text-cyan-900">Offline Capability</CardTitle>
-                <CardDescription>
-                  Continue operations in areas with poor connectivity with automatic sync when connection is restored.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Offline data storage</li>
-                  <li>• Cached map data</li>
-                  <li>• Queue sync when online</li>
-                  <li>• Essential function access</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <Shield className="w-6 h-6 text-cyan-600" />
-                </div>
-                <CardTitle className="text-cyan-900">Secure Data Transmission</CardTitle>
-                <CardDescription>
-                  End-to-end encryption ensures sensitive information remains protected during transmission.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• End-to-end encryption</li>
-                  <li>• Secure authentication</li>
-                  <li>• Data loss prevention</li>
-                  <li>• Compliance ready</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <Zap className="w-6 h-6 text-cyan-600" />
-                </div>
-                <CardTitle className="text-cyan-900">GPS & Location Services</CardTitle>
-                <CardDescription>
-                  Precise location tracking and navigation capabilities for efficient field operations.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• High-accuracy GPS tracking</li>
-                  <li>• Turn-by-turn navigation</li>
-                  <li>• Location sharing</li>
-                  <li>• Breadcrumb trail logging</li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="border-cyan-200 hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
-                  <Download className="w-6 h-6 text-cyan-600" />
-                </div>
-                <CardTitle className="text-cyan-900">Field Data Collection</CardTitle>
-                <CardDescription>
-                  Capture photos, notes, and other critical information directly from the field.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-gray-600">
-                  <li>• Photo capture and upload</li>
-                  <li>• Voice note recording</li>
-                  <li>• Digital form completion</li>
-                  <li>• Evidence documentation</li>
-                </ul>
-              </CardContent>
-            </Card>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Mobile App Carousel Section */}
-      <section className="py-20 bg-cyan-50">
+      {/* Use Case Spotlight */}
+      <section className="py-24 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Mobile Screenshots</h2>
-            <p className="text-xl text-gray-600">Experience the intuitive mobile interface designed for field operations</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Phone mockup 1 */}
-            <div className="flex justify-center">
-              <div className="w-48 h-96 bg-gray-900 rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-[1.5rem] flex flex-col">
-                  <div className="p-4 text-center">
-                    <div className="text-sm font-semibold text-cyan-900 mb-2">Incident List</div>
-                    <div className="space-y-2">
-                      <div className="bg-white/80 rounded p-2 text-xs text-left">
-                        <div className="font-medium text-red-600">Priority 1</div>
-                        <div className="text-gray-700">Medical Emergency</div>
-                      </div>
-                      <div className="bg-white/80 rounded p-2 text-xs text-left">
-                        <div className="font-medium text-orange-600">Priority 2</div>
-                        <div className="text-gray-700">Traffic Accident</div>
-                      </div>
-                      <div className="bg-white/80 rounded p-2 text-xs text-left">
-                        <div className="font-medium text-blue-600">Priority 3</div>
-                        <div className="text-gray-700">Welfare Check</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Phone mockup 2 */}
-            <div className="flex justify-center">
-              <div className="w-48 h-96 bg-gray-900 rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-[1.5rem] flex flex-col">
-                  <div className="p-4 text-center">
-                    <div className="text-sm font-semibold text-cyan-900 mb-2">Map View</div>
-                    <div className="bg-white/80 rounded-lg h-32 flex items-center justify-center mb-4">
-                      <div className="text-center">
-                        <div className="w-8 h-8 bg-cyan-600 rounded-full mx-auto mb-2 flex items-center justify-center">
-                          <div className="w-2 h-2 bg-white rounded-full"></div>
-                        </div>
-                        <div className="text-xs text-gray-700">Your Location</div>
-                      </div>
-                    </div>
-                    <div className="space-y-1 text-xs">
-                      <div className="bg-white/80 rounded p-1">Distance: 2.3 mi</div>
-                      <div className="bg-white/80 rounded p-1">ETA: 4 min</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Phone mockup 3 */}
-            <div className="flex justify-center">
-              <div className="w-48 h-96 bg-gray-900 rounded-[2rem] p-2 shadow-xl">
-                <div className="w-full h-full bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-[1.5rem] flex flex-col">
-                  <div className="p-4 text-center">
-                    <div className="text-sm font-semibold text-cyan-900 mb-2">Unit Status</div>
-                    <div className="space-y-2">
-                      <div className="bg-green-100 border border-green-300 rounded p-2">
-                        <div className="text-xs font-medium text-green-800">Available</div>
-                      </div>
-                      <div className="bg-white/80 rounded p-2 text-xs text-left">
-                        <div className="font-medium">Last Update</div>
-                        <div className="text-gray-700">2:34 PM</div>
-                      </div>
-                      <div className="bg-white/80 rounded p-2 text-xs text-left">
-                        <div className="font-medium">Location</div>
-                        <div className="text-gray-700">Main & 5th St</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
-                Empower Your Field Personnel
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <Badge variant="outline" className="border-green-600 text-green-600">
+                Success Story
+              </Badge>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
+                Fire Department Reduces Response Time by
+                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                  40%
+                </span>
               </h2>
-              <p className="text-xl text-gray-600 mb-8">
-                Give your responders the tools they need to stay connected, informed, and effective, 
-                whether they're in the vehicle or on foot.
-              </p>
-
-              <div className="space-y-6 mb-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Smartphone className="w-6 h-6 text-cyan-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Always Connected</h3>
-                    <p className="text-gray-600">Real-time access to incident information, unit status, and dispatch communications from any location.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <WifiOff className="w-6 h-6 text-cyan-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Works Anywhere</h3>
-                    <p className="text-gray-600">Offline capability ensures critical functions remain available even in areas with poor connectivity.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-cyan-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-6 h-6 text-cyan-600" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-lg text-gray-900 mb-2">Secure by Design</h3>
-                    <p className="text-gray-600">Enterprise-grade security protects sensitive information with end-to-end encryption and secure authentication.</p>
-                  </div>
+              <div className="space-y-4 text-gray-600">
+                <p className="text-lg">
+                  Metro Fire Department deployed our mobile solution across 45 stations, 
+                  enabling faster incident response and better coordination between units.
+                </p>
+                <div className="space-y-3">
+                  {[
+                    "Instant incident notifications to all nearby units",
+                    "Real-time GPS tracking and optimal routing",
+                    "Seamless communication with dispatch center",
+                    "Offline access to critical building information"
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center space-x-3">
+                      <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
+                      <span>{item}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
-
-              <div className="grid grid-cols-2 gap-6">
-                <div className="bg-cyan-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-cyan-600 mb-1">50%</div>
-                  <div className="text-sm text-gray-600">Faster Field Updates</div>
-                </div>
-                <div className="bg-cyan-50 rounded-lg p-4 text-center">
-                  <div className="text-2xl font-bold text-cyan-600 mb-1">24/7</div>
-                  <div className="text-sm text-gray-600">Field Access</div>
-                </div>
-              </div>
+              <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 hover:scale-105 transition-all duration-300">
+                Read Full Case Study
+              </Button>
             </div>
 
-            <div className="flex justify-center">
-              <div className="relative">
-                {/* Tablet mockup */}
-                <div className="w-80 h-60 bg-gray-900 rounded-2xl p-3 shadow-2xl">
-                  <div className="w-full h-full bg-gradient-to-br from-cyan-100 to-cyan-200 rounded-xl flex items-center justify-center relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-600/10 to-blue-600/10"></div>
-                    <div className="relative z-10 text-center p-6">
-                      <div className="grid grid-cols-3 gap-4 mb-6">
-                        <div className="bg-white/80 rounded-lg p-3">
-                          <Smartphone className="w-6 h-6 text-cyan-600 mx-auto mb-1" />
-                          <div className="text-xs font-medium">Mobile</div>
-                        </div>
-                        <div className="bg-white/80 rounded-lg p-3">
-                          <RefreshCw className="w-6 h-6 text-blue-600 mx-auto mb-1" />
-                          <div className="text-xs font-medium">Sync</div>
-                        </div>
-                        <div className="bg-white/80 rounded-lg p-3">
-                          <Shield className="w-6 h-6 text-green-600 mx-auto mb-1" />
-                          <div className="text-xs font-medium">Secure</div>
-                        </div>
-                      </div>
-                      <p className="text-sm font-semibold text-cyan-900">Tablet Interface</p>
-                      <p className="text-xs text-cyan-700">Command Vehicle View</p>
+            <div className="relative">
+              <div className="bg-gray-50 border border-gray-200 p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300">
+                <div className="space-y-6">
+                  <div className="flex items-center justify-between">
+                    <h3 className="text-2xl font-bold text-gray-900">Response Metrics</h3>
+                    <Badge className="bg-green-100 text-green-700 border-green-300">
+                      Live Data
+                    </Badge>
+                  </div>
+                  
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-green-600 mb-2">3:42</div>
+                      <div className="text-gray-600">Avg Response</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-blue-600 mb-2">98%</div>
+                      <div className="text-gray-600">System Uptime</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+                      <div className="text-gray-600">Support</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-3xl font-bold text-orange-600 mb-2">45</div>
+                      <div className="text-gray-600">Active Units</div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-3">
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-600">Response Rate</span>
+                      <span className="text-gray-900">92%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2">
+                      <div className="bg-gradient-to-r from-green-500 to-emerald-500 h-2 rounded-full w-[92%] animate-pulse"></div>
                     </div>
                   </div>
                 </div>
@@ -400,26 +360,36 @@ export default function MobilePage() {
           </div>
         </div>
       </section>
+
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-cyan-600 to-cyan-800">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Extend Your Operations to the Field
+      <section className="relative py-24 gradient-mesh animate-rotate-gradient overflow-hidden">
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
+        
+        {/* Floating Particles */}
+        <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
+        <div className="absolute bottom-20 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute top-32 right-40 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-300"></div>
+
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl animate-fade-in-up">
+            Ready to Deploy?
           </h2>
-          <p className="text-xl mb-8 opacity-90">
-            Give your team seamless access to CAD and Map functionality from any device, anywhere, anytime.
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-lg animate-fade-in-up delay-300">
+            See how our mobile platform can transform your field operations. 
+            Request a customized demo for your organization.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
-              <Link href="/contact">Discover Mobile Access</Link>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-500">
+            <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
+              Schedule Demo
             </Button>
-            <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-white text-white hover:bg-white hover:text-cyan-600">
-              <Link href="/solutions/analytics">Explore Analytics Integration</Link>
+            <Button variant="outline" size="lg" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
+              Download Brochure
             </Button>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
