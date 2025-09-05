@@ -63,8 +63,7 @@ export default function AboutPage() {
         
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 animate-fade-in-up">
-            <span className="text-white drop-shadow-2xl">Our</span>
-            <br />
+            <span className="text-white drop-shadow-2xl mr-4">Our</span>
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
               Mission
             </span>
