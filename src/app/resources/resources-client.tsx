@@ -321,36 +321,7 @@ export function ResourcesClient() {
                     className="w-full h-auto object-cover rounded-2xl hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  
-                  {/* Knowledge Hub Visual */}
-                  <div className="relative z-10 w-full h-full flex items-center justify-center">
-                    <div className="text-center">
-                      {/* Central Hub */}
-                      <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-orange-600 rounded-full flex items-center justify-center shadow-2xl relative animate-float">
-                        <BookOpen className="w-12 h-12 text-white" />
-                        
-                        {/* Connecting Lines */}
-                        <div className="absolute top-1/2 left-1/2 w-32 h-32 -translate-x-1/2 -translate-y-1/2">
-                          {/* Resource Connection Points */}
-                          <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-200 hover:scale-110 transition-transform duration-300">
-                            <FileText className="w-4 h-4 text-white" />
-                          </div>
-                          <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-slate-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-400 hover:scale-110 transition-transform duration-300">
-                            <Video className="w-4 h-4 text-white" />
-                          </div>
-                          <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-600 hover:scale-110 transition-transform duration-300">
-                            <BookOpen className="w-4 h-4 text-white" />
-                          </div>
-                          <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-800 hover:scale-110 transition-transform duration-300">
-                            <Lightbulb className="w-4 h-4 text-white" />
-                          </div>
-                        </div>
-                      </div>
-                      
-                      <p className="text-xl font-semibold text-white/90 mb-2">Knowledge Hub</p>
-                      <p className="text-sm text-white/70">Expert Resources & Insights</p>
-                    </div>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
                 </div>
               </div>
             </div>
@@ -496,12 +467,6 @@ export function ResourcesClient() {
                         />
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
-                        <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-500">
-                          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
-                            <p className="text-sm font-semibold text-gray-900">Featured Insight</p>
-                            <p className="text-xs text-gray-600">Data Analytics & Business Intelligence</p>
-                          </div>
-                        </div>
                       </div>
                     </div>
                   </div>
