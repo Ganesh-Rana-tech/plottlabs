@@ -41,7 +41,7 @@ export default function AboutPage() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600", 
+      purple: "from-purple-500 to-purple-600",
       cyan: "from-cyan-500 to-cyan-600",
       green: "from-green-500 to-green-600"
     };
@@ -54,13 +54,13 @@ export default function AboutPage() {
       <section className="relative min-h-[80vh] flex items-center justify-center gradient-mesh animate-rotate-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
-        
+
         {/* Floating particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
         <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
         <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
-        
+
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 animate-fade-in-up">
             <span className="text-white drop-shadow-2xl">Empowering Safer Communities</span>
@@ -91,19 +91,19 @@ export default function AboutPage() {
               Our cloud-native solutions are transforming emergency response across the nation
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Building2,
-                number: "150+",
+                number: "50+",
                 label: "Agencies Served",
                 description: "Emergency response agencies nationwide",
                 color: "blue"
               },
               {
                 icon: Globe,
-                number: "25+",
+                number: "3",
                 label: "States Deployed",
                 description: "Across multiple states and territories",
                 color: "purple"
@@ -125,10 +125,10 @@ export default function AboutPage() {
             ].map((stat, index) => {
               const Icon = stat.icon;
               return (
-                <Card 
+                <Card
                   key={stat.label}
                   className={`group hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up border-0 bg-white/80 backdrop-blur-sm`}
-                  style={{animationDelay: `${index * 150}ms`}}
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <CardContent className="p-8 text-center">
                     <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(stat.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -162,15 +162,15 @@ export default function AboutPage() {
               These principles guide every decision we make and every solution we build
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {values.map((value, index) => {
               const Icon = value.icon;
               return (
-                <Card 
+                <Card
                   key={value.title}
                   className={`group hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up border-0 bg-white/10 backdrop-blur-sm`}
-                  style={{animationDelay: `${index * 100}ms`}}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader className="text-center">
                     <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(value.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -187,7 +187,7 @@ export default function AboutPage() {
               );
             })}
           </div>
-          
+
           {/* How We Deliver Our Mission */}
           <div className="mt-20">
             <div className="text-center mb-16 animate-fade-in-up">
@@ -198,7 +198,7 @@ export default function AboutPage() {
                 Three pillars that drive our commitment to transforming emergency response
               </p>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
                 {
@@ -216,16 +216,16 @@ export default function AboutPage() {
                 {
                   icon: Shield,
                   title: "Secure & Scalable Ecosystem",
-                  description: "Built with DoD-level security standards and open architecture principles for maximum interoperability and future growth.",
+                  description: "Built with DoD-level security standards and validated against DISA control baselines, our platform is FedRAMP- and GovRAMP-authorized and JITC-certified. The open-architecture design ensures maximum interoperability, long-term resilience, and future growth across mission-critical environments.",
                   color: "cyan"
                 }
               ].map((pillar, index) => {
                 const Icon = pillar.icon;
                 return (
-                  <Card 
+                  <Card
                     key={pillar.title}
                     className={`group hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up border-0 bg-white/10 backdrop-blur-sm`}
-                    style={{animationDelay: `${index * 150}ms`}}
+                    style={{ animationDelay: `${index * 150}ms` }}
                   >
                     <CardContent className="p-8 text-center">
                       <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(pillar.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -248,7 +248,7 @@ export default function AboutPage() {
 
       {/* Our Story Section */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-left">
@@ -269,20 +269,20 @@ export default function AboutPage() {
                   Today, Plott Labs serves agencies nationwide through our OneNet Incident Response Cloud, helping them improve response times, enhance situational awareness, and ultimately save more lives through the power of modern cloud technology.
                 </p>
               </div>
-              
+
               <div className="mt-10">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300">
                   <Link href="/contact">Join Our Mission</Link>
                 </Button>
               </div>
             </div>
-            
+
             <div className="animate-fade-in-right">
               <div className="bg-white rounded-2xl border border-gray-200 p-8 space-y-8 shadow-xl">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-gray-900 mb-6">Product Suite at a Glance</h3>
                 </div>
-                
+
                 <div className="space-y-6">
                   <div className="flex items-start space-x-4 group">
                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -293,7 +293,7 @@ export default function AboutPage() {
                       <p className="text-gray-600 text-sm">Streamline dispatch operations with real-time incident management</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4 group">
                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-6 h-6 text-white" />
@@ -303,17 +303,27 @@ export default function AboutPage() {
                       <p className="text-gray-600 text-sm">Visualize incidents and hazards with real-time data overlays</p>
                     </div>
                   </div>
-                  
+
                   <div className="flex items-start space-x-4 group">
                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Smartphone className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h4 className="text-gray-900 font-semibold mb-2">Mobile Application</h4>
-                      <p className="text-gray-600 text-sm">Extend CAD and Map functionality to field personnel</p>
+                      <h4 className="text-gray-900 font-semibold mb-2">Mobile Web Application (Browser-Based)</h4>
+                      <p className="text-gray-600 text-sm">Browser access for supervisors with quick situational awareness</p>
                     </div>
                   </div>
-                  
+
+                  <div className="flex items-start space-x-4 group">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <Smartphone className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="text-gray-900 font-semibold mb-2">Handheld Application (Field-Ready App)</h4>
+                      <p className="text-gray-600 text-sm">Native app for ruggedized handhelds with offline capabilities</p>
+                    </div>
+                  </div>
+
                   <div className="flex items-start space-x-4 group">
                     <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <BarChart3 className="w-6 h-6 text-white" />
@@ -341,32 +351,44 @@ export default function AboutPage() {
               Our leadership team brings decades of combined experience in public safety, technology, and mission-critical systems
             </p>
           </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {[
               {
-                name: "Sarah Chen",
-                role: "Chief Executive Officer",
-                description: "Former emergency services director with 15+ years transforming public safety operations through technology innovation.",
+                name: "John Plott",
+                role: "Chief Executive Officer · Principal Owner",
+                description: "Seasoned public-safety tech founder who guides company strategy, partnerships, and compliance for global, multi-tenant deployments. Focused on turning mission-critical needs into scalable products agencies can trust. With over 30 years experience.",
                 color: "blue"
               },
               {
-                name: "Michael Rodriguez",
-                role: "Chief Technology Officer",
-                description: "Cloud architecture expert specializing in secure, scalable systems for mission-critical applications and DoD compliance.",
+                name: "Cliff Gandy",
+                role: "Chief Technology Officer · Principal Owner",
+                description: "Cloud & systems architect for secure CAD/NG911 and multi-tenant platforms. Brings federal/DoD public-safety experience. With over 20 years experience.",
                 color: "purple"
               },
               {
-                name: "Dr. Jennifer Walsh",
-                role: "Chief Product Officer",
-                description: "Human-centered design leader focused on creating intuitive interfaces that enhance rather than complicate emergency response workflows.",
+                name: "Cliff Veale",
+                role: "Chief Financial Officer · Principal Owner",
+                description: "Operations and program-leadership veteran in federal public-safety systems; previously held senior federal-solutions roles. Oversees financial strategy, contracts, and audit-ready controls. With over 30 years experience.",
                 color: "cyan"
+              },
+              {
+                name: "Brian McVey",
+                role: "Vice President, Product Management",
+                description: "Leads product vision and roadmaps for the OneNet Suite and mobile apps—prioritizing usability, CJIS-aware workflows, and fast agency value. With over 30 years experience.",
+                color: "green"
+              },
+              {
+                name: "Aaron Berg",
+                role: "Vice President, Engineering",
+                description: "Engineering leader focused on reliability, security, and velocity. Drives platform architecture, API strategy, and agile delivery across web and mobile for mission-critical operations. With over 10 years experience.",
+                color: "blue"
               }
             ].map((leader, index) => (
-              <Card 
+              <Card
                 key={leader.name}
                 className={`group hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up border-0 bg-white/10 backdrop-blur-sm`}
-                style={{animationDelay: `${index * 150}ms`}}
+                style={{ animationDelay: `${index * 150}ms` }}
               >
                 <CardContent className="p-8 text-center">
                   <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(leader.color)} rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -399,10 +421,10 @@ export default function AboutPage() {
               Our journey of continuous innovation in emergency response technology
             </p>
           </div>
-          
+
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500 rounded-full"></div>
-            
+
             <div className="space-y-12">
               {[
                 {
@@ -436,7 +458,7 @@ export default function AboutPage() {
                   color: "blue"
                 }
               ].map((milestone, index) => (
-                <div key={milestone.year} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} animate-fade-in-up`} style={{animationDelay: `${index * 200}ms`}}>
+                <div key={milestone.year} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} animate-fade-in-up`} style={{ animationDelay: `${index * 200}ms` }}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'}`}>
                     <div className={`inline-block px-6 py-3 rounded-full text-white font-bold text-lg mb-4 bg-gradient-to-r ${getColorClasses(milestone.color)}`}>
                       {milestone.year}
@@ -466,40 +488,40 @@ export default function AboutPage() {
               Trusted by agencies nationwide with industry-leading security and compliance standards
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               {
                 icon: Shield,
                 title: "CJIS Compliant",
-                description: "Fully compliant with Criminal Justice Information Services standards",
+                description: "Fully compliant with Criminal Justice Information Services standards, ensuring secure handling of sensitive law enforcement data with encryption and access controls.",
                 color: "blue"
               },
               {
                 icon: Lock,
                 title: "DoD Security Framework",
-                description: "Built to DoD Risk Management Framework standards for maximum security",
+                description: "Validated against DISA control baselines and built to DoD Risk Management Framework (RMF) standards. Our platform is FedRAMP- and GovRAMP-authorized and JITC-certified, ensuring mission-critical compliance and security at every level.",
                 color: "purple"
               },
               {
                 icon: Award,
                 title: "Industry Recognition",
-                description: "Recognized as a leader in next-generation emergency response technology",
+                description: "Recognized as a leader in next-generation emergency response technology with multiple industry awards and certifications from leading emergency services organizations.",
                 color: "cyan"
               },
               {
                 icon: Globe,
                 title: "Nationwide Trust",
-                description: "Trusted by emergency response agencies across the United States",
+                description: "Trusted by emergency response agencies across the Nation, from rural departments to major metropolitan areas with proven reliability and consistent performance.",
                 color: "green"
               }
             ].map((cert, index) => {
               const Icon = cert.icon;
               return (
-                <Card 
+                <Card
                   key={cert.title}
                   className={`group hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up border-0 bg-white/10 backdrop-blur-sm`}
-                  style={{animationDelay: `${index * 150}ms`}}
+                  style={{ animationDelay: `${index * 150}ms` }}
                 >
                   <CardContent className="p-8 text-center">
                     <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(cert.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
@@ -530,7 +552,7 @@ export default function AboutPage() {
               See how our cloud-native approach compares to traditional legacy systems
             </p>
           </div>
-          
+
           <div className="bg-white rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -550,7 +572,7 @@ export default function AboutPage() {
                     },
                     {
                       feature: "Security",
-                      plott: "DoD-level, continuous updates",
+                      plott: "DoD-level, FedRAMP & JITC certified",
                       traditional: "Outdated, patch-dependent"
                     },
                     {

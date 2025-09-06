@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Shield, MapPin, Smartphone, BarChart3, CheckCircle, Users, Clock, Lock } from "lucide-react";
+import { Shield, MapPin, Smartphone, BarChart3, CheckCircle, Users, Clock, Lock, TabletSmartphone } from "lucide-react";
 
 export default function Home() {
   return (
@@ -25,17 +25,11 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float delay-500"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center z-10">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-4 animate-fade-in-up">
-            <span className="text-white drop-shadow-2xl">
-              Enterprise-Grade
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x animate-fade-in-up delay-300">
-              Incident Response
-            </span>
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-10 animate-fade-in-up text-white drop-shadow-2xl">
+            Enterprise-Grade
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-3xl mx-auto animate-fade-in-up delay-500 drop-shadow-lg">
-            Delivered in the Cloud. Simplify dispatch operations with our integrated CAD, Map, Mobile, and Analytics platform built for the modern era.
+            Delivered in the Cloud and built for mission-critical environments. Our platform is FedRAMP-authorized and JITC-certified, designed to meet DISA compliance criteria for federal, state, and military deployments. Simplify dispatch operations with our integrated CAD, Mapping, Mobile, and Analytics solutions—engineered to deliver secure, scalable performance for the modern era.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-10 animate-fade-in-up delay-700">
             <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
@@ -160,7 +154,7 @@ export default function Home() {
                 Enterprise-Level Reliability.
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Built on DoD-level security frameworks, our cloud-native platform delivers the reliability and compliance your agency demands.
+                Built on DoD-level security frameworks and validated against DISA STIGs, our cloud-native platform meets the highest standards of FedRAMP authorization and JITC certification. This ensures the reliability, resilience, and compliance your agency demands—whether operating locally, nationally, or globally.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
@@ -168,28 +162,28 @@ export default function Home() {
                   <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h3 className="font-semibold group-hover:text-green-600 transition-colors duration-300">SaaS-First Architecture</h3>
-                    <p className="text-sm text-muted-foreground">Cloud-native design for maximum scalability</p>
+                    <p className="text-sm text-muted-foreground">Cloud-native design for maximum scalability and resilience.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 animate-fade-in-up delay-200 group">
                   <Lock className="w-5 h-5 text-blue-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h3 className="font-semibold group-hover:text-blue-600 transition-colors duration-300">DoD-Level Security</h3>
-                    <p className="text-sm text-muted-foreground">Military-grade encryption and compliance</p>
+                    <p className="text-sm text-muted-foreground">Military-grade encryption with FedRAMP and JITC validation.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 animate-fade-in-up delay-300 group">
                   <Clock className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h3 className="font-semibold group-hover:text-purple-600 transition-colors duration-300">Rapid Deployment</h3>
-                    <p className="text-sm text-muted-foreground">Get operational in weeks, not months</p>
+                    <p className="text-sm text-muted-foreground">Get operational in weeks, not months, without compromising compliance.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-3 animate-fade-in-up delay-400 group">
                   <Users className="w-5 h-5 text-cyan-600 mt-1 flex-shrink-0 group-hover:scale-110 transition-transform duration-300" />
                   <div>
                     <h3 className="font-semibold group-hover:text-cyan-600 transition-colors duration-300">For All Agencies</h3>
-                    <p className="text-sm text-muted-foreground">Affordable solutions for every size</p>
+                    <p className="text-sm text-muted-foreground">Affordable, secure solutions tailored to every agency size.</p>
                   </div>
                 </div>
               </div>
@@ -244,33 +238,33 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="glass rounded-2xl p-8 border border-white/10 animate-fade-in-left">
-              <blockquote className="text-xl text-gray-300 mb-6 leading-relaxed">
-                "Plott Labs transformed our dispatch operations. Response times improved by 23% in the first quarter alone."
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+            <div className="glass rounded-2xl p-8 border border-white/10 animate-fade-in-left flex flex-col h-full">
+              <blockquote className="text-xl text-gray-300 mb-6 leading-relaxed flex-grow">
+                "Carroll County E-911 recently selected the OneNet system after evaluating several other CAD products. We found OneNet to be the best fit for our center's operational needs. We were particularly impressed with the intuitive screen layout and how easy it is to input call information as service requests come in. The Fast Path option simplifies the process of logging responders on and off, allowing us to manage units quickly and efficiently. Everything we need is literally at our fingertips."
               </blockquote>
-              <div className="flex items-center">
+              <div className="flex items-center mt-auto">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
                   <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Chief Operations Officer</p>
-                  <p className="text-gray-400 text-sm">Regional Emergency Services</p>
+                  <p className="text-white font-semibold">Donna Windsor</p>
+                  <p className="text-gray-400 text-sm">Assistant Director of Carroll County E-911</p>
                 </div>
               </div>
             </div>
 
-            <div className="glass rounded-2xl p-8 border border-white/10 animate-fade-in-right delay-200">
-              <blockquote className="text-xl text-gray-300 mb-6 leading-relaxed">
-                "The unified platform eliminated data silos and improved interagency coordination significantly."
+            <div className="glass rounded-2xl p-8 border border-white/10 animate-fade-in-right delay-200 flex flex-col h-full">
+              <blockquote className="text-xl text-gray-300 mb-6 leading-relaxed flex-grow">
+                "We've had a great experience with the OneNet product. It's intuitive and user-friendly, making it easy for our team to get up to speed quickly. The support team has been outstanding—timely, attentive, and always willing to go the extra mile to help. Everyone we've interacted with has been professional, accommodating, and genuinely great to work with. Highly recommend this solution for anyone looking for a reliable, well-supported CAD platform."
               </blockquote>
-              <div className="flex items-center">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500 to-green-600 rounded-full flex items-center justify-center mr-4">
-                  <Shield className="w-6 h-6 text-white" />
+              <div className="flex items-center mt-auto">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                  <Users className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold">Director of Public Safety</p>
-                  <p className="text-gray-400 text-sm">Metropolitan Airport Authority</p>
+                  <p className="text-white font-semibold">Elizabeth Pierson</p>
+                  <p className="text-gray-400 text-sm">ENP, Director of Carroll County E911</p>
                 </div>
               </div>
             </div>
@@ -279,84 +273,162 @@ export default function Home() {
       </section>
 
       {/* Product Showcase Carousel */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/20 via-transparent to-purple-50/20"></div>
+        <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/40 rounded-full animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-400/40 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-cyan-400/40 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-green-400/40 rounded-full animate-pulse delay-700"></div>
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16 animate-fade-in-up">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+          <div className="text-center mb-20 animate-fade-in-up">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-gray-900 via-blue-600 to-purple-600 bg-clip-text text-transparent">
               Complete Platform Overview
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Discover how our integrated suite transforms every aspect of incident response
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* CAD System */}
-            <div className="space-y-8">
-              <div className="glass bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-left group">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Shield className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Computer-Aided Dispatch</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Real-time incident management</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />ProQA certified protocols</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Intelligent resource allocation</li>
+          <div className="space-y-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
+              {/* CAD System */}
+              <div className="group animate-fade-in-up">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-blue-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Shield className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Computer-Aided Dispatch</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Advanced dispatch system with real-time incident management and intelligent resource allocation.</p>
+                    <ul className="space-y-3 mt-auto">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Real-time incident management</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">ProQA certified protocols</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Intelligent resource allocation</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* Mobile App */}
-              <div className="glass bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-left delay-200 group">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <Smartphone className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Mobile Application</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Field-ready mobile access</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Offline-capable operations</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Cross-device synchronization</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="space-y-8">
               {/* Mapping */}
-              <div className="glass bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-right group">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <MapPin className="w-8 h-8 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Interactive Mapping</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Live incident visualization</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Hazard and weather overlays</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Aerial imagery integration</li>
+              <div className="group animate-fade-in-up delay-200">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+                  <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-purple-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <MapPin className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Interactive Mapping</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Advanced mapping with live incident visualization and comprehensive overlays.</p>
+                    <ul className="space-y-3 mt-auto">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Live incident visualization</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Hazard and weather overlays</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Aerial imagery integration</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
               </div>
 
               {/* Analytics */}
-              <div className="glass bg-white/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-200/50 hover:shadow-xl transition-all duration-500 hover:scale-105 animate-fade-in-right delay-200 group">
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <BarChart3 className="w-8 h-8 text-white" />
+              <div className="group animate-fade-in-up delay-400">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 h-full flex flex-col">
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-green-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10 flex flex-col h-full">
+                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <BarChart3 className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Analytics & Reporting</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed flex-grow">Comprehensive analytics with custom dashboards and real-time performance insights.</p>
+                    <ul className="space-y-3 mt-auto">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Custom dashboard creation</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Real-time performance KPIs</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Exportable compliance reports</span>
+                      </li>
+                    </ul>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Analytics & Reporting</h3>
-                    <ul className="space-y-2 text-gray-600">
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Custom dashboard creation</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Real-time performance KPIs</li>
-                      <li className="flex items-center"><CheckCircle className="w-4 h-4 text-green-600 mr-2 flex-shrink-0" />Exportable compliance reports</li>
+                </div>
+              </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+              {/* Mobile App */}
+              <div className="group animate-fade-in-up delay-600">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-cyan-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="w-20 h-20 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Smartphone className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Mobile Application</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">Browser-based mobile access designed for supervisors and command staff.</p>
+                    <ul className="space-y-3">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Cross-device browser access</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Supervisor & command staff focused</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Quick situational awareness</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Handheld App */}
+              <div className="group animate-fade-in-up delay-800">
+                <div className="relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-100 h-full">
+                  <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-orange-600/5 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="relative z-10">
+                    <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <TabletSmartphone className="w-10 h-10 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Handheld Application</h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">Native field-ready app optimized for ruggedized handhelds and offline operations.</p>
+                    <ul className="space-y-3">
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Ruggedized handheld optimized</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Connected or offline environments</span>
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                        <span className="text-gray-700">Fast field data entry</span>
+                      </li>
                     </ul>
                   </div>
                 </div>
