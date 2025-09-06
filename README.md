@@ -15,6 +15,7 @@ A modern, enterprise-grade website built with Next.js 14, TypeScript, Tailwind C
 
 - **Homepage** (`/`) - Hero section, value propositions, platform overview
 - **Solutions** (`/solutions`) - Overview of all four core tools
+  - **OneNet Suite** (`/onenetsuite`) - OneNet Suite Incident Response Cloud
   - **CAD** (`/solutions/cad`) - Computer-Aided Dispatch details
   - **Map** (`/solutions/map`) - Mapping application features
   - **Mobile** (`/solutions/mobile`) - Mobile app capabilities
@@ -22,7 +23,6 @@ A modern, enterprise-grade website built with Next.js 14, TypeScript, Tailwind C
 - **About** (`/about`) - Company mission, values, and story
 - **Pricing** (`/pricing`) - Flexible SaaS pricing tiers
 - **Contact** (`/contact`) - Demo request form and contact information
-- **OneNet** (`/onenet`) - OneNet Incident Response Cloud
 - **Industries** (`/industries`) - Target industries and use cases
 - **Case Studies** (`/case-studies`) - Success stories and testimonials
 - **Resources** (`/resources`) - Blog posts, whitepapers, and videos

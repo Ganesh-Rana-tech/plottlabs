@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, Shield, MapPin, Smartphone, BarChart3, Users, Clock, Award, CheckCircle } from "lucide-react";
+import { Menu, X, ChevronDown, Shield, MapPin, Smartphone, BarChart3, Users, Clock, Award, CheckCircle, Layers } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,6 +14,14 @@ const Navbar = () => {
   const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const solutions = [
+    {
+      name: "Onenetsuite",
+      title: "OneNet Suite",
+      description: "The complete suite of software solutions for public safety agencies",
+      href: "/solutions/onenetsuite",
+      icon: Layers,
+      color: "blue"
+    },
     {
       name: "CAD",
       title: "Computer-Aided Dispatch",
@@ -28,7 +36,7 @@ const Navbar = () => {
       description: "Visualize incidents and hazards with real-time data overlays",
       href: "/solutions/map",
       icon: MapPin,
-      color: "purple"
+      color: "slate"
     },
     {
       name: "Mobile",
@@ -36,7 +44,7 @@ const Navbar = () => {
       description: "Extend CAD and Map functionality to field personnel",
       href: "/solutions/mobile",
       icon: Smartphone,
-      color: "cyan"
+      color: "blue"
     },
     {
       name: "Analytics",
@@ -63,7 +71,7 @@ const Navbar = () => {
       description: "Meet our expert leadership team",
       href: "/about#leadership",
       icon: Users,
-      color: "purple"
+      color: "slate"
     },
     {
       name: "Innovation Timeline",
@@ -71,7 +79,7 @@ const Navbar = () => {
       description: "Our journey of continuous innovation",
       href: "/about#timeline",
       icon: Clock,
-      color: "cyan"
+      color: "blue"
     },
     {
       name: "Certifications & Trust",
@@ -92,7 +100,6 @@ const Navbar = () => {
   ];
 
   const navigation = [
-    { name: "OneNet Cloud", href: "/onenet" },
     { name: "Industries", href: "/industries" },
     { name: "Case Studies", href: "/case-studies" },
     { name: "Resources", href: "/resources" },
@@ -102,8 +109,8 @@ const Navbar = () => {
   const getIconColorClass = (color: string) => {
     const colorMap = {
       blue: "text-blue-500",
-      purple: "text-purple-500",
-      cyan: "text-cyan-500",
+      slate: "text-slate-500",
+      blue: "text-blue-500",
       green: "text-green-500"
     };
     return colorMap[color as keyof typeof colorMap] || "text-blue-500";
@@ -112,8 +119,8 @@ const Navbar = () => {
   const getBgColorClass = (color: string) => {
     const colorMap = {
       blue: "bg-blue-50",
-      purple: "bg-purple-50",
-      cyan: "bg-cyan-50",
+      slate: "bg-slate-50",
+      blue: "bg-blue-50",
       green: "bg-green-50"
     };
     return colorMap[color as keyof typeof colorMap] || "bg-blue-50";

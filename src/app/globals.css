@@ -246,7 +246,7 @@
 
   /* Gradient backgrounds */
   .gradient-mesh {
-    background: linear-gradient(-45deg, #667eea 0%, #764ba2 25%, #f093fb 50%, #f5576c 75%, #4facfe 100%);
+    background: linear-gradient(-45deg, #1e40af 0%, #1e3a8a 25%, #0f172a 50%, #1e293b 75%, #334155 100%);
     background-size: 400% 400%;
   }
 
@@ -336,7 +336,7 @@
   }
 
   .gradient-mesh {
-    background: linear-gradient(-45deg, #1e3a8a, #7c3aed, #0891b2, #059669);
+    background: linear-gradient(-45deg, #1e3a8a, #0f172a, #0891b2, #059669);
     background-size: 400% 400%;
     animation: rotate-gradient 15s ease infinite;
   }
@@ -387,5 +387,26 @@
 
   .animate-bounce-in {
     animation: bounce-in 0.6s ease-out forwards;
+  }
+
+  /* Dark Orange Utilities */
+  .text-orange-dark {
+    color: #ff6b00;
+  }
+
+  .bg-orange-dark {
+    background-color: #ff6b00;
+  }
+
+  .border-orange-dark {
+    border-color: #ff6b00;
+  }
+
+  .shadow-orange-dark {
+    box-shadow: 0 0 20px rgba(255, 107, 0, 0.3);
+  }
+
+  .gradient-orange-dark {
+    background: linear-gradient(135deg, #ff6b00, #ff8c00);
   }
 }

@@ -22,13 +22,13 @@ export default function AboutPage() {
       icon: Lightbulb,
       title: "Customer Inspiration",
       description: "Every feature we build is inspired by real-world challenges our customers face in the field.",
-      color: "purple"
+      color: "slate"
     },
     {
       icon: Shield,
       title: "Integrity",
       description: "We maintain the highest standards of security, transparency, and ethical business practices.",
-      color: "cyan"
+      color: "blue"
     },
     {
       icon: Handshake,
@@ -41,8 +41,8 @@ export default function AboutPage() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600",
-      cyan: "from-cyan-500 to-cyan-600",
+      slate: "from-slate-500 to-slate-600",
+      blue: "from-blue-500 to-blue-600",
       green: "from-green-500 to-green-600"
     };
     return colors[color as keyof typeof colors] || colors.blue;
@@ -57,15 +57,15 @@ export default function AboutPage() {
 
         {/* Floating particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center z-10">
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8 animate-fade-in-up">
             <span className="text-white drop-shadow-2xl">Empowering Safer Communities</span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
               Through Cloud Technology
             </span>
           </h1>
@@ -106,14 +106,14 @@ export default function AboutPage() {
                 number: "3",
                 label: "States Deployed",
                 description: "Across multiple states and territories",
-                color: "purple"
+                color: "slate"
               },
               {
                 icon: TrendingUp,
                 number: "40%",
                 label: "Faster Response Times",
                 description: "Average improvement in incident response",
-                color: "cyan"
+                color: "blue"
               },
               {
                 icon: Calendar,
@@ -211,13 +211,13 @@ export default function AboutPage() {
                   icon: Users,
                   title: "Human-Centered Innovation",
                   description: "Every feature is designed with real users in mind, ensuring our technology enhances rather than complicates critical workflows.",
-                  color: "purple"
+                  color: "slate"
                 },
                 {
                   icon: Shield,
                   title: "Secure & Scalable Ecosystem",
                   description: "Built with DoD-level security standards and validated against DISA control baselines, our platform is FedRAMP- and GovRAMP-authorized and JITC-certified. The open-architecture design ensures maximum interoperability, long-term resilience, and future growth across mission-critical environments.",
-                  color: "cyan"
+                  color: "blue"
                 }
               ].map((pillar, index) => {
                 const Icon = pillar.icon;
@@ -271,7 +271,7 @@ export default function AboutPage() {
               </div>
 
               <div className="mt-10">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300">
                   <Link href="/contact">Join Our Mission</Link>
                 </Button>
               </div>
@@ -295,7 +295,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="flex items-start space-x-4 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-slate-500 to-slate-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <MapPin className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -305,7 +305,7 @@ export default function AboutPage() {
                   </div>
 
                   <div className="flex items-start space-x-4 group">
-                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                    <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Smartphone className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -364,13 +364,13 @@ export default function AboutPage() {
                 name: "Cliff Gandy",
                 role: "Chief Technology Officer · Principal Owner",
                 description: "Cloud & systems architect for secure CAD/NG911 and multi-tenant platforms. Brings federal/DoD public-safety experience. With over 20 years experience.",
-                color: "purple"
+                color: "slate"
               },
               {
                 name: "Cliff Veale",
                 role: "Chief Financial Officer · Principal Owner",
                 description: "Operations and program-leadership veteran in federal public-safety systems; previously held senior federal-solutions roles. Oversees financial strategy, contracts, and audit-ready controls. With over 30 years experience.",
-                color: "cyan"
+                color: "blue"
               },
               {
                 name: "Brian McVey",
@@ -423,7 +423,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500 rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-orange-500 to-blue-600 rounded-full"></div>
 
             <div className="space-y-12">
               {[
@@ -437,13 +437,13 @@ export default function AboutPage() {
                   year: "2021",
                   title: "First Cloud-Native CAD Solution",
                   description: "Launched our flagship Computer-Aided Dispatch platform built from the ground up for the cloud",
-                  color: "purple"
+                  color: "slate"
                 },
                 {
                   year: "2022",
                   title: "Statewide Deployments",
                   description: "Expanded operations to serve agencies across multiple states with our OneNet platform",
-                  color: "cyan"
+                  color: "blue"
                 },
                 {
                   year: "2023",
@@ -501,13 +501,13 @@ export default function AboutPage() {
                 icon: Lock,
                 title: "DoD Security Framework",
                 description: "Validated against DISA control baselines and built to DoD Risk Management Framework (RMF) standards. Our platform is FedRAMP- and GovRAMP-authorized and JITC-certified, ensuring mission-critical compliance and security at every level.",
-                color: "purple"
+                color: "slate"
               },
               {
                 icon: Award,
                 title: "Industry Recognition",
                 description: "Recognized as a leader in next-generation emergency response technology with multiple industry awards and certifications from leading emergency services organizations.",
-                color: "cyan"
+                color: "blue"
               },
               {
                 icon: Globe,
@@ -624,7 +624,7 @@ export default function AboutPage() {
             Discover how Plott Labs can help your agency embrace the future of incident response with our cloud-native OneNet platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
-            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-xl">
+            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-xl">
               <Link href="/contact">Schedule a Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 hover:scale-105 transition-all duration-300 hover:shadow-lg">

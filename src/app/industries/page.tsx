@@ -51,11 +51,11 @@ export default function IndustriesPage() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600",
-      cyan: "from-cyan-500 to-cyan-600",
+      slate: "from-slate-500 to-slate-600",
+      blue: "from-blue-500 to-blue-600",
       green: "from-green-500 to-green-600",
       red: "from-red-500 to-red-600",
-      indigo: "from-indigo-500 to-indigo-600",
+      gray: "from-gray-500 to-gray-600",
       orange: "from-orange-500 to-orange-600"
     };
     return colors[color as keyof typeof colors] || colors.blue;
@@ -77,12 +77,12 @@ export default function IndustriesPage() {
         hoverText: "text-white",
         glow: "shadow-blue-500/25"
       },
-      purple: {
-        bg: "from-purple-100 to-purple-200",
-        hoverBg: "from-purple-500 to-purple-600",
-        text: "text-purple-600",
+      slate: {
+        bg: "from-slate-100 to-slate-200",
+        hoverBg: "from-slate-500 to-slate-600",
+        text: "text-slate-600",
         hoverText: "text-white",
-        glow: "shadow-purple-500/25"
+        glow: "shadow-slate-500/25"
       },
       green: {
         bg: "from-green-100 to-green-200",
@@ -91,12 +91,12 @@ export default function IndustriesPage() {
         hoverText: "text-white",
         glow: "shadow-green-500/25"
       },
-      indigo: {
-        bg: "from-indigo-100 to-indigo-200",
-        hoverBg: "from-indigo-500 to-indigo-600",
-        text: "text-indigo-600",
+      gray: {
+        bg: "from-gray-100 to-gray-200",
+        hoverBg: "from-gray-500 to-gray-600",
+        text: "text-gray-600",
         hoverText: "text-white",
-        glow: "shadow-indigo-500/25"
+        glow: "shadow-gray-500/25"
       },
       orange: {
         bg: "from-orange-100 to-orange-200",
@@ -113,8 +113,8 @@ export default function IndustriesPage() {
     { name: "Police Departments", icon: Shield, color: "blue" },
     { name: "Fire Services", icon: Flame, color: "red" },
     { name: "Emergency Medical", icon: Activity, color: "green" },
-    { name: "Aviation Security", icon: Plane, color: "indigo" },
-    { name: "Critical Infrastructure", icon: Building, color: "purple" },
+    { name: "Aviation Security", icon: Plane, color: "gray" },
+    { name: "Critical Infrastructure", icon: Building, color: "slate" },
     { name: "Facilities Management", icon: Wrench, color: "orange" }
   ];
 
@@ -131,7 +131,7 @@ export default function IndustriesPage() {
       title: "Critical Infrastructure",
       description: "Power plants, water systems, and transportation networks use our platform to monitor, protect, and respond to threats in real-time.",
       icon: Building,
-      color: "purple",
+      color: "slate",
       benefits: ["Threat detection", "System monitoring", "Rapid response", "Asset protection"],
       image: "critical-infrastructure"
     },
@@ -162,7 +162,7 @@ export default function IndustriesPage() {
       result: "Real-time threat detection, 60% faster incident response, zero security breaches",
       metric: "60%",
       metricLabel: "Faster Response",
-      color: "purple"
+      color: "slate"
     },
     {
       industry: "Facilities Management",
@@ -186,7 +186,7 @@ export default function IndustriesPage() {
       icon: Lock,
       title: "Security-First Design",
       description: "Built with DoD-level security standards and CJIS compliance, protecting sensitive data across all industries.",
-      color: "purple"
+      color: "slate"
     },
     {
       icon: Network,
@@ -198,7 +198,7 @@ export default function IndustriesPage() {
       icon: Globe,
       title: "Interoperability",
       description: "Connect with existing systems and protocols, ensuring smooth integration without disrupting current operations.",
-      color: "indigo"
+      color: "gray"
     }
   ];
 
@@ -243,7 +243,7 @@ export default function IndustriesPage() {
       icon: Eye,
       title: "Real-time Awareness",
       description: "Complete situational awareness with live data and analytics",
-      color: "purple"
+      color: "slate"
     },
     {
       icon: Heart,
@@ -269,8 +269,8 @@ export default function IndustriesPage() {
         <div className="absolute bottom-40 left-32 w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center animate-float delay-500">
           <Building className="w-8 h-8 text-green-400" />
         </div>
-        <div className="absolute top-60 right-20 w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center animate-float delay-700">
-          <Factory className="w-8 h-8 text-purple-400" />
+        <div className="absolute top-60 right-20 w-16 h-16 bg-slate-500/20 rounded-full flex items-center justify-center animate-float delay-700">
+          <Factory className="w-8 h-8 text-slate-400" />
         </div>
         <div className="absolute bottom-20 right-40 w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center animate-float delay-300">
           <Wrench className="w-8 h-8 text-orange-400" />
@@ -282,7 +282,7 @@ export default function IndustriesPage() {
               <h1 className="text-6xl md:text-8xl font-bold tracking-tight mb-8">
                 <span className="text-white drop-shadow-2xl">Who We</span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
                   Serve
                 </span>
               </h1>
@@ -294,15 +294,15 @@ export default function IndustriesPage() {
             {/* Industry Stats Grid */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto animate-fade-in-up delay-500">
               <div className="glass rounded-2xl border border-white/20 p-6 backdrop-blur-sm hover:scale-105 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">15+</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-orange-500 bg-clip-text text-transparent mb-2">15+</div>
                 <div className="text-gray-300 text-sm">Industries Served</div>
               </div>
               <div className="glass rounded-2xl border border-white/20 p-6 backdrop-blur-sm hover:scale-105 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">500+</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">500+</div>
                 <div className="text-gray-300 text-sm">Organizations</div>
               </div>
               <div className="glass rounded-2xl border border-white/20 p-6 backdrop-blur-sm hover:scale-105 transition-all duration-300">
-                <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">99.9%</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-orange-500 bg-clip-text text-transparent mb-2">99.9%</div>
                 <div className="text-gray-300 text-sm">Uptime</div>
               </div>
               <div className="glass rounded-2xl border border-white/20 p-6 backdrop-blur-sm hover:scale-105 transition-all duration-300">
@@ -319,8 +319,8 @@ export default function IndustriesPage() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           <div className="absolute top-20 left-20 w-32 h-32 bg-blue-200/20 rounded-full blur-2xl animate-float"></div>
-          <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-200/20 rounded-full blur-2xl animate-float delay-1000"></div>
-          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-200/20 rounded-full blur-2xl animate-float delay-500"></div>
+          <div className="absolute bottom-20 right-20 w-40 h-40 bg-slate-200/20 rounded-full blur-2xl animate-float delay-1000"></div>
+          <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-200/20 rounded-full blur-2xl animate-float delay-500"></div>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -349,7 +349,7 @@ export default function IndustriesPage() {
                     <div className="absolute inset-0">
                       <div className={`absolute inset-0 bg-gradient-to-br ${getColorClasses(industry.color)} opacity-5 group-hover:opacity-10 transition-opacity duration-700`}></div>
                       <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full -translate-y-20 translate-x-20 group-hover:scale-150 transition-transform duration-700"></div>
-                      <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-purple-200/30 to-transparent rounded-full translate-y-16 -translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
+                      <div className="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-slate-200/30 to-transparent rounded-full translate-y-16 -translate-x-16 group-hover:scale-150 transition-transform duration-700"></div>
                     </div>
 
                     {/* Content */}
@@ -360,7 +360,7 @@ export default function IndustriesPage() {
                           <Icon className="w-10 h-10 text-white group-hover:animate-pulse" />
                         </div>
                         <div className="text-right">
-                          <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                          <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-slate-600 bg-clip-text text-transparent">
                             {index + 1}
                           </div>
                           <div className="text-sm text-gray-500">Industry</div>
@@ -405,7 +405,7 @@ export default function IndustriesPage() {
                     </div>
 
                     {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
                     
                     {/* Shimmer Effect */}
                     <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent skew-x-12"></div>
@@ -419,14 +419,14 @@ export default function IndustriesPage() {
 
       {/* Industry Challenges & Solutions */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
               Industry Challenges
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 We Solve
               </span>
             </h2>
@@ -450,7 +450,7 @@ export default function IndustriesPage() {
                 solution: "Cloud-Native Modernization",
                 description: "Migrating from outdated systems to scalable, secure cloud infrastructure",
                 icon: Cloud,
-                color: "purple"
+                color: "slate"
               },
               {
                 challenge: "Security & Compliance Concerns",
@@ -472,7 +472,7 @@ export default function IndustriesPage() {
                 <div key={item.challenge} className="relative">
                   {/* Connection Arrow */}
                   <div className="hidden lg:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-slate-500 rounded-full flex items-center justify-center shadow-lg">
                       <ArrowRight className="w-6 h-6 text-white" />
                     </div>
                   </div>
@@ -523,7 +523,7 @@ export default function IndustriesPage() {
                       <div className="relative">
                         {/* Solution Badge */}
                         <div className="absolute -top-3 -left-3 z-20">
-                          <div className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
+                          <div className="bg-gradient-to-r from-blue-500 to-slate-500 text-white px-3 py-1 rounded-full text-xs font-semibold shadow-md">
                             Our Solution
                           </div>
                         </div>
@@ -567,7 +567,7 @@ export default function IndustriesPage() {
 
       {/* Industry Success Metrics */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-purple-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-slate-50/30"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
@@ -584,7 +584,7 @@ export default function IndustriesPage() {
             {[
               { metric: "45%", label: "Faster Response Times", icon: Gauge, color: "blue" },
               { metric: "99.9%", label: "System Uptime", icon: Shield, color: "green" },
-              { metric: "$2.3M", label: "Average Cost Savings", icon: DollarSign, color: "purple" },
+              { metric: "$2.3M", label: "Average Cost Savings", icon: DollarSign, color: "slate" },
               { metric: "500+", label: "Organizations Served", icon: Users, color: "orange" }
             ].map((item, index) => {
               const Icon = item.icon;
@@ -618,7 +618,7 @@ export default function IndustriesPage() {
               {
                 industry: "Critical Infrastructure",
                 icon: Building,
-                color: "purple",
+                color: "slate",
                 results: [
                   { metric: "99.9%", label: "System Reliability" },
                   { metric: "50%", label: "Faster Threat Detection" },
@@ -664,14 +664,14 @@ export default function IndustriesPage() {
 
       {/* Industry-Specific Solutions */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
               Tailored Solutions
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 For Every Industry
               </span>
             </h2>
@@ -683,7 +683,7 @@ export default function IndustriesPage() {
           {/* Industry Solutions Timeline */}
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-purple-500 to-cyan-500 rounded-full"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 via-slate-500 to-blue-600 rounded-full"></div>
             
             <div className="space-y-16">
               {[
@@ -697,7 +697,7 @@ export default function IndustriesPage() {
                 {
                   industry: "Critical Infrastructure",
                   icon: Building,
-                  color: "purple",
+                  color: "slate",
                   solutions: ["Threat monitoring systems", "Asset protection protocols", "Compliance management", "Incident response automation"],
                   position: "right"
                 },
@@ -747,7 +747,7 @@ export default function IndustriesPage() {
 
       {/* Industry Partners Showcase */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-purple-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-slate-50/30"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
@@ -772,7 +772,7 @@ export default function IndustriesPage() {
                 industry: "Critical Infrastructure",
                 partners: ["Regional Power Authority", "Water Treatment Facilities", "Transportation Networks", "Telecommunications"],
                 icon: Building,
-                color: "purple"
+                color: "slate"
               },
               {
                 industry: "Facilities Management",
@@ -794,7 +794,7 @@ export default function IndustriesPage() {
                     <div className="space-y-3">
                       {sector.partners.map((partner, idx) => (
                         <div key={idx} className="flex items-center space-x-3 py-2 border-b border-gray-100 last:border-b-0 group-hover:border-gray-200 transition-colors duration-300">
-                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
+                          <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-slate-500 rounded-full group-hover:scale-125 transition-transform duration-300"></div>
                           <span className="text-gray-600 group-hover:text-gray-700 transition-colors duration-300">{partner}</span>
                         </div>
                       ))}
@@ -814,7 +814,7 @@ export default function IndustriesPage() {
               { number: "24/7", label: "Support Available" }
             ].map((stat, index) => (
               <div key={stat.label} className="text-center animate-fade-in-up" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-2">{stat.number}</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-slate-600 bg-clip-text text-transparent mb-2">{stat.number}</div>
                 <div className="text-gray-600">{stat.label}</div>
               </div>
             ))}
@@ -824,14 +824,14 @@ export default function IndustriesPage() {
 
       {/* Industry Transformation Journey */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white drop-shadow-2xl">
               Your Industry's
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 Transformation Journey
               </span>
             </h2>
@@ -855,7 +855,7 @@ export default function IndustriesPage() {
                 title: "Planning",
                 description: "Develop a customized implementation strategy for your industry",
                 icon: MapPin,
-                color: "purple"
+                color: "slate"
               },
               {
                 step: "03",
@@ -912,8 +912,8 @@ export default function IndustriesPage() {
         <div className="absolute bottom-40 left-32 w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center animate-float delay-500">
           <Building className="w-8 h-8 text-green-400" />
         </div>
-        <div className="absolute top-60 right-20 w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center animate-float delay-700">
-          <Factory className="w-8 h-8 text-purple-400" />
+        <div className="absolute top-60 right-20 w-16 h-16 bg-slate-500/20 rounded-full flex items-center justify-center animate-float delay-700">
+          <Factory className="w-8 h-8 text-slate-400" />
         </div>
         <div className="absolute bottom-20 right-40 w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center animate-float delay-300">
           <Wrench className="w-8 h-8 text-orange-400" />
@@ -924,7 +924,7 @@ export default function IndustriesPage() {
             <h2 className="text-5xl md:text-7xl font-bold mb-8">
               <span className="text-white drop-shadow-2xl">Ready to Transform</span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
                 Your Industry?
               </span>
             </h2>
@@ -945,10 +945,10 @@ export default function IndustriesPage() {
             </div>
             
             <div className="glass rounded-2xl border border-white/20 p-6 backdrop-blur-sm hover:scale-105 transition-all duration-300">
-              <Building className="w-12 h-12 text-purple-400 mx-auto mb-4" />
+              <Building className="w-12 h-12 text-slate-400 mx-auto mb-4" />
               <h3 className="text-xl font-bold text-white mb-2">Infrastructure</h3>
               <p className="text-gray-300 text-sm mb-4">Critical systems & monitoring</p>
-              <Button size="sm" className="w-full bg-purple-600 hover:bg-purple-700">
+              <Button size="sm" className="w-full bg-slate-600 hover:bg-slate-700">
                 <Link href="/solutions/analytics">View Analytics</Link>
               </Button>
             </div>

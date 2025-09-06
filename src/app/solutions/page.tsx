@@ -20,8 +20,8 @@ export default function SolutionsPage() {
         
         {/* Floating particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center z-10">
@@ -30,7 +30,7 @@ export default function SolutionsPage() {
               One Unified Platform.
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
               Four Core Tools.
             </span>
           </h1>
@@ -42,12 +42,12 @@ export default function SolutionsPage() {
 
       {/* Animated Product Connections */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 One Platform.
               </span>
               <br />
@@ -68,18 +68,18 @@ export default function SolutionsPage() {
             </div>
             
             <div className="glass border border-white/10 rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up delay-200 group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
                 <MapPin className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors duration-300">Map</h3>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-slate-400 transition-colors duration-300">Map</h3>
               <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">Real-time Visualization</p>
             </div>
             
             <div className="glass border border-white/10 rounded-2xl p-8 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-2 animate-fade-in-up delay-300 group">
-              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+              <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
                 <Smartphone className="w-10 h-10 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">Mobile</h3>
+              <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">Mobile</h3>
               <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-300">Field Access</p>
             </div>
             
@@ -97,11 +97,11 @@ export default function SolutionsPage() {
             <div className="glass rounded-2xl border border-white/10 p-8 max-w-2xl mx-auto">
               <div className="flex items-center justify-center space-x-4 mb-4">
                 <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                <div className="w-8 h-px bg-gradient-to-r from-blue-400 to-purple-400"></div>
-                <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-200"></div>
-                <div className="w-8 h-px bg-gradient-to-r from-purple-400 to-cyan-400"></div>
-                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse delay-400"></div>
-                <div className="w-8 h-px bg-gradient-to-r from-cyan-400 to-green-400"></div>
+                <div className="w-8 h-px bg-gradient-to-r from-blue-400 to-slate-400"></div>
+                <div className="w-3 h-3 bg-slate-400 rounded-full animate-pulse delay-200"></div>
+                <div className="w-8 h-px bg-gradient-to-r from-slate-400 to-blue-400"></div>
+                <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse delay-400"></div>
+                <div className="w-8 h-px bg-gradient-to-r from-blue-400 to-green-400"></div>
                 <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse delay-600"></div>
               </div>
               <p className="text-white font-semibold text-lg">Seamlessly Connected Ecosystem</p>
@@ -169,14 +169,14 @@ export default function SolutionsPage() {
             
             {/* Map Card */}
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-200 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
                 <div className="flex items-center space-x-4 mb-4">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <CardTitle className="text-2xl group-hover:text-purple-600 transition-colors duration-300">Interactive Incident Mapping</CardTitle>
+                    <CardTitle className="text-2xl group-hover:text-slate-600 transition-colors duration-300">Interactive Incident Mapping</CardTitle>
                     <p className="text-gray-500 text-sm">Real-time Maps | Hazards & Weather Integration</p>
                   </div>
                 </div>
@@ -187,23 +187,23 @@ export default function SolutionsPage() {
               <CardContent className="relative z-10">
                 <div className="space-y-3 mb-6">
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0" />
                     <span className="text-gray-700">Aerial views and high-resolution imagery</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0" />
                     <span className="text-gray-700">Hazard icons and weather integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0" />
                     <span className="text-gray-700">Bidirectional CAD integration</span>
                   </div>
                   <div className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0" />
+                    <CheckCircle className="w-5 h-5 text-slate-600 flex-shrink-0" />
                     <span className="text-gray-700">Real-time incident visualization</span>
                   </div>
                 </div>
-                <Button variant="outline" className="w-full border-2 border-purple-600 text-purple-600 hover:bg-purple-50 group-hover:scale-105 transition-all duration-300">
+                <Button variant="outline" className="w-full border-2 border-slate-600 text-slate-600 hover:bg-slate-50 group-hover:scale-105 transition-all duration-300">
                   <Link href="/solutions/map" className="flex items-center justify-center">
                     See Map in Action <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
@@ -215,7 +215,7 @@ export default function SolutionsPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Mobile Card */}
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-300 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
                 <div className="flex items-center space-x-4 mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -315,7 +315,7 @@ export default function SolutionsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
             Experience the
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent block">
               Full Platform
             </span>
           </h2>

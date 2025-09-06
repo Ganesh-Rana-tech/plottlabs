@@ -1,4 +1,5 @@
 import { Metadata } from 'next'
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -18,7 +19,8 @@ import {
   Mic,
   Navigation,
   Clock,
-  CheckCircle
+  CheckCircle,
+  Globe
 } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -43,20 +45,20 @@ export default function MobilePage() {
 
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-2 h-2 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
-        <div className="absolute top-60 right-40 w-3 h-3 bg-pink-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-60 right-40 w-3 h-3 bg-orange-400/60 rounded-full animate-particle-float delay-700"></div>
         <div className="absolute bottom-40 right-60 w-4 h-4 bg-green-400/60 rounded-full animate-particle-float delay-300"></div>
 
         {/* Main gradient orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-slate-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float delay-500"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-center z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="lg:text-left">
               <div className="mb-6 animate-fade-in-up">
-                <Badge variant="outline" className="glass border-white/20 text-cyan-300 hover:bg-white/10 mb-4">
+                <Badge variant="outline" className="glass border-white/20 text-blue-300 hover:bg-white/10 mb-4">
                   <Smartphone className="w-4 h-4 mr-2" />
                   Mobile Solutions
                 </Badge>
@@ -67,7 +69,7 @@ export default function MobilePage() {
                   Field Operations in Your
                 </span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
                   Pocket
                 </span>
               </h1>
@@ -80,7 +82,7 @@ export default function MobilePage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-start mb-8 animate-fade-in-up delay-700">
-                <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
+                <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
                   Request Demo
                 </Button>
                 <Button size="lg" variant="outline" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
@@ -146,7 +148,7 @@ export default function MobilePage() {
 
                         {/* Map Preview */}
                         <div className="glass border border-white/10 rounded-2xl p-4 mb-4 relative h-40 overflow-hidden hover:shadow-xl transition-all duration-300">
-                          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-purple-900/50 rounded-2xl">
+                          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/50 to-slate-900/50 rounded-2xl">
                             <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
                             {/* Simulated Map Points */}
                             <div className="absolute top-6 left-8 w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
@@ -183,7 +185,7 @@ export default function MobilePage() {
                   <Bell className="w-6 h-6 text-blue-400" />
                 </div>
                 <div className="absolute top-20 -right-8 glass border border-white/10 p-3 rounded-2xl animate-float delay-300 hover:scale-110 transition-transform duration-300">
-                  <Camera className="w-6 h-6 text-purple-400" />
+                  <Camera className="w-6 h-6 text-slate-400" />
                 </div>
                 <div className="absolute -bottom-8 -left-4 glass border border-white/10 p-3 rounded-2xl animate-float delay-500 hover:scale-110 transition-transform duration-300">
                   <Mic className="w-6 h-6 text-green-400" />
@@ -196,19 +198,19 @@ export default function MobilePage() {
 
       {/* Key Features Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
 
         {/* Background particles */}
         <div className="absolute top-40 left-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-32 right-32 w-3 h-3 bg-purple-400/40 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-cyan-400/40 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-32 right-32 w-3 h-3 bg-slate-400/40 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float delay-500"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Built for Critical
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 Operations
               </span>
             </h2>
@@ -231,7 +233,7 @@ export default function MobilePage() {
                 icon: Zap,
                 title: "Real-time Updates", 
                 description: "Instant incident notifications, status updates, and resource tracking. Push notifications with priority levels.",
-                color: "purple",
+                color: "slate",
                 delay: "delay-200"
               },
               {
@@ -252,14 +254,14 @@ export default function MobilePage() {
                 icon: Calendar,
                 title: "Offline Capability",
                 description: "Full functionality without network coverage. Automatic sync when connection is restored.",
-                color: "indigo",
+                color: "gray",
                 delay: "delay-500"
               },
               {
                 icon: Bell,
                 title: "Smart Notifications",
                 description: "Priority-based alerts, customizable notification sounds, and Do Not Disturb scheduling.",
-                color: "cyan",
+                color: "blue",
                 delay: "delay-700"
               }
             ].map((feature, index) => (
@@ -288,7 +290,7 @@ export default function MobilePage() {
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900">
                 Fire Department Reduces Response Time by
-                <span className="block bg-gradient-to-r from-blue-600 via-purple-600 to-cyan-600 bg-clip-text text-transparent">
+                <span className="block bg-gradient-to-r from-blue-600 via-orange-600 to-blue-600 bg-clip-text text-transparent">
                   40%
                 </span>
               </h2>
@@ -336,7 +338,7 @@ export default function MobilePage() {
                       <div className="text-gray-600">System Uptime</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold text-purple-600 mb-2">24/7</div>
+                      <div className="text-3xl font-bold text-slate-600 mb-2">24/7</div>
                       <div className="text-gray-600">Support</div>
                     </div>
                     <div className="text-center">
@@ -361,6 +363,145 @@ export default function MobilePage() {
         </div>
       </section>
 
+      {/* Mobile Dashboard Section */}
+      <section className="py-24 gradient-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in-left">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+                Real-time Call
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Management
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+                Monitor active calls, track response status, and manage incident priorities with our intuitive mobile dashboard. Get instant visibility into your agency's operational status.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">Active</div>
+                  <div className="text-sm text-gray-300">Live Incidents</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-100">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">Closed</div>
+                  <div className="text-sm text-gray-300">Resolved Cases</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-200">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-2">Pending</div>
+                  <div className="text-sm text-gray-300">Awaiting Response</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-300">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent mb-2">Assigned</div>
+                  <div className="text-sm text-gray-300">Units Deployed</div>
+                </div>
+              </div>
+              
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+                View Dashboard Demo
+              </Button>
+            </div>
+
+            <div className="animate-fade-in-right">
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl">
+                <div className="relative max-w-[280px] mx-auto p-2">
+                  <Image
+                    src="/images/mobile/ab.png"
+                    alt="Mobile Dashboard - Active Calls Management Interface"
+                    width={280}
+                    height={210}
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                  
+                  {/* Floating Icons */}
+                  <div className="absolute -top-4 -left-8 glass border border-white/10 p-3 rounded-2xl animate-float hover:scale-110 transition-transform duration-300">
+                    <Users className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div className="absolute top-20 -right-8 glass border border-white/10 p-3 rounded-2xl animate-float delay-300 hover:scale-110 transition-transform duration-300">
+                    <Clock className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div className="absolute -bottom-8 -left-4 glass border border-white/10 p-3 rounded-2xl animate-float delay-500 hover:scale-110 transition-transform duration-300">
+                    <Bell className="w-6 h-6 text-green-400" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mobile Map Section */}
+      <section className="py-24 gradient-dark relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
+        
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="animate-fade-in-left">
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl">
+                <div className="relative max-w-[280px] mx-auto p-2">
+                  <Image
+                    src="/images/mobile/map.png"
+                    alt="Mobile Map Navigation - Real-time Route Planning and Weather"
+                    width={280}
+                    height={210}
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                  
+                  {/* Floating Icons */}
+                  <div className="absolute -top-4 -left-8 glass border border-white/10 p-3 rounded-2xl animate-float hover:scale-110 transition-transform duration-300">
+                    <MapPin className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <div className="absolute top-20 -right-8 glass border border-white/10 p-3 rounded-2xl animate-float delay-300 hover:scale-110 transition-transform duration-300">
+                    <Navigation className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <div className="absolute -bottom-8 -left-4 glass border border-white/10 p-3 rounded-2xl animate-float delay-500 hover:scale-110 transition-transform duration-300">
+                    <Globe className="w-6 h-6 text-green-400" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="animate-fade-in-right">
+              <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
+                Real-time
+                <br />
+                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  Navigation
+                </span>
+              </h2>
+              <p className="text-xl text-gray-300 mb-10 leading-relaxed">
+                Navigate to incidents with precision using our integrated mapping system. Get real-time route optimization, weather conditions at the incident location, and multiple map layer options for any operational environment.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mb-10">
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">Live</div>
+                  <div className="text-sm text-gray-300">Route Tracking</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-100">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-2">Weather</div>
+                  <div className="text-sm text-gray-300">Conditions</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-200">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-2">Layers</div>
+                  <div className="text-sm text-gray-300">Map Views</div>
+                </div>
+                <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-300">
+                  <div className="text-4xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent mb-2">ETA</div>
+                  <div className="text-sm text-gray-300">Arrival Time</div>
+                </div>
+              </div>
+              
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+                View Map Demo
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA Section */}
       <section className="relative py-24 gradient-mesh animate-rotate-gradient overflow-hidden">
@@ -369,8 +510,8 @@ export default function MobilePage() {
         
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-20 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-700"></div>
-        <div className="absolute top-32 right-40 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-300"></div>
+        <div className="absolute bottom-20 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute top-32 right-40 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-300"></div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-6 text-white drop-shadow-2xl animate-fade-in-up">
@@ -381,7 +522,7 @@ export default function MobilePage() {
             Request a customized demo for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-500">
-            <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
+            <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
               Schedule Demo
             </Button>
             <Button variant="outline" size="lg" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">

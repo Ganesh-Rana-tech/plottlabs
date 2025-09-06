@@ -26,6 +26,7 @@ import {
   Search
 } from "lucide-react";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export function ResourcesClient() {
   const [activeFilter, setActiveFilter] = useState('all');
@@ -38,8 +39,7 @@ export function ResourcesClient() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600", 
-      cyan: "from-cyan-500 to-cyan-600",
+      slate: "from-slate-500 to-slate-600", 
       green: "from-green-500 to-green-600"
     };
     return colors[color as keyof typeof colors] || colors.blue;
@@ -72,7 +72,7 @@ export function ResourcesClient() {
       readTime: "6 min read",
       category: "blog",
       image: "saas-comparison",
-      color: "purple"
+      color: "slate"
     },
     {
       id: 3,
@@ -82,7 +82,7 @@ export function ResourcesClient() {
       readTime: "10 min read",
       category: "blog",
       image: "multi-agency",
-      color: "cyan"
+      color: "blue"
     },
     {
       id: 4,
@@ -112,7 +112,7 @@ export function ResourcesClient() {
       readTime: "12 min read",
       category: "blog",
       image: "security",
-      color: "purple"
+      color: "slate"
     },
     {
       id: 7,
@@ -122,7 +122,7 @@ export function ResourcesClient() {
       readTime: "5 min read",
       category: "blog",
       image: "roi-analysis",
-      color: "cyan"
+      color: "blue"
     },
     {
       id: 8,
@@ -153,7 +153,7 @@ export function ResourcesClient() {
       downloadUrl: "#",
       pages: "18 pages",
       category: "whitepapers",
-      color: "purple"
+      color: "slate"
     },
     {
       id: 3,
@@ -162,7 +162,7 @@ export function ResourcesClient() {
       downloadUrl: "#",
       pages: "32 pages",
       category: "whitepapers",
-      color: "cyan"
+      color: "blue"
     },
     {
       id: 4,
@@ -201,7 +201,7 @@ export function ResourcesClient() {
       duration: "8:45",
       thumbnail: "cad-demo",
       category: "videos",
-      color: "purple"
+      color: "slate"
     },
     {
       id: 3,
@@ -210,7 +210,7 @@ export function ResourcesClient() {
       duration: "6:20",
       thumbnail: "mobile-tutorial",
       category: "videos",
-      color: "cyan"
+      color: "blue"
     },
     {
       id: 4,
@@ -243,13 +243,13 @@ export function ResourcesClient() {
       icon: Zap,
       title: "Pro Tip",
       content: "Real-time data synchronization across agencies can improve response coordination by up to 50%.",
-      color: "purple"
+      color: "slate"
     },
     {
       icon: Shield,
       title: "Security Insight",
       content: "Our platform maintains DoD-level security standards while enabling seamless multi-agency collaboration.",
-      color: "cyan"
+      color: "blue"
     }
   ];
 
@@ -277,13 +277,13 @@ export function ResourcesClient() {
         
         {/* Floating particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
         
         {/* Additional floating elements */}
         <div className="absolute top-32 left-1/4 w-2 h-2 bg-yellow-400/50 rounded-full animate-particle-float delay-300"></div>
-        <div className="absolute bottom-40 right-1/3 w-3 h-3 bg-pink-400/50 rounded-full animate-particle-float delay-800"></div>
+        <div className="absolute bottom-40 right-1/3 w-3 h-3 bg-orange-400/50 rounded-full animate-particle-float delay-800"></div>
         <div className="absolute top-1/2 left-10 w-1 h-1 bg-white/40 rounded-full animate-particle-float delay-1200"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 z-10">
@@ -292,7 +292,7 @@ export function ResourcesClient() {
             <div className="text-center lg:text-left animate-fade-in-left">
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
                 <span className="text-white drop-shadow-2xl block">Insights &</span>
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block">
+                <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent block">
                   Resources
                 </span>
               </h1>
@@ -300,7 +300,7 @@ export function ResourcesClient() {
                 Stay informed with expert blogs, whitepapers, and tutorials focused on emergency response technologies.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up delay-200">
+                <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up delay-200">
                   <Link href="#content">Explore Resources</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up delay-400">
@@ -311,15 +311,22 @@ export function ResourcesClient() {
             
             {/* Illustration */}
             <div className="relative animate-fade-in-right delay-300">
-              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl p-8">
-                <div className="aspect-square bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-2xl flex items-center justify-center relative overflow-hidden">
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl p-4">
+                <div className="relative rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/others/resources.png"
+                    alt="Resources & Insights - Knowledge Hub Platform"
+                    width={600}
+                    height={600}
+                    className="w-full h-auto object-cover rounded-2xl hover:scale-110 transition-transform duration-700"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
                   
                   {/* Knowledge Hub Visual */}
                   <div className="relative z-10 w-full h-full flex items-center justify-center">
                     <div className="text-center">
                       {/* Central Hub */}
-                      <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center shadow-2xl relative animate-float">
+                      <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-blue-600 to-orange-600 rounded-full flex items-center justify-center shadow-2xl relative animate-float">
                         <BookOpen className="w-12 h-12 text-white" />
                         
                         {/* Connecting Lines */}
@@ -328,13 +335,13 @@ export function ResourcesClient() {
                           <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-200 hover:scale-110 transition-transform duration-300">
                             <FileText className="w-4 h-4 text-white" />
                           </div>
-                          <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-400 hover:scale-110 transition-transform duration-300">
+                          <div className="absolute -right-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-slate-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-400 hover:scale-110 transition-transform duration-300">
                             <Video className="w-4 h-4 text-white" />
                           </div>
                           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-600 hover:scale-110 transition-transform duration-300">
                             <BookOpen className="w-4 h-4 text-white" />
                           </div>
-                          <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-cyan-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-800 hover:scale-110 transition-transform duration-300">
+                          <div className="absolute -left-4 top-1/2 -translate-y-1/2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center shadow-lg animate-float delay-800 hover:scale-110 transition-transform duration-300">
                             <Lightbulb className="w-4 h-4 text-white" />
                           </div>
                         </div>
@@ -355,8 +362,8 @@ export function ResourcesClient() {
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-20 left-20 w-32 h-32 bg-blue-100/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 bg-purple-100/30 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-cyan-100/30 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 bg-slate-100/30 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-blue-100/30 rounded-full blur-3xl animate-float delay-500"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -384,7 +391,7 @@ export function ResourcesClient() {
                 description: "In-depth technical guides and implementation resources for modernizing your operations.",
                 cta: "View Whitepapers",
                 filter: "whitepapers",
-                color: "purple"
+                color: "slate"
               },
               {
                 icon: Video,
@@ -392,7 +399,7 @@ export function ResourcesClient() {
                 description: "Visual guides and platform demonstrations to help you get the most from our solutions.",
                 cta: "Watch Videos",
                 filter: "videos",
-                color: "cyan"
+                color: "blue"
               }
             ].map((hub, index) => {
               const Icon = hub.icon;
@@ -404,7 +411,7 @@ export function ResourcesClient() {
                   onClick={() => setActiveFilter(hub.filter)}
                 >
                   {/* Hover background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <CardContent className="p-8 text-center relative z-10">
                     <div className={`w-20 h-20 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(hub.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg relative overflow-hidden`}>
@@ -449,7 +456,7 @@ export function ResourcesClient() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                   <div>
                     <div className="flex items-center mb-4">
-                      <Badge className="bg-gradient-to-r from-blue-500 to-purple-500 text-white">
+                      <Badge className="bg-gradient-to-r from-blue-500 to-orange-500 text-white">
                         Featured Article
                       </Badge>
                       <span className="ml-4 text-gray-300">{featuredArticle.date}</span>
@@ -467,10 +474,10 @@ export function ResourcesClient() {
                       </div>
                       <div className="flex items-center space-x-2">
                         <Calendar className="w-4 h-4" />
-                        <span>{new Date(featuredArticle.date).toLocaleDateString()}</span>
+                        <span>{new Date(featuredArticle.date).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' })}</span>
                       </div>
                     </div>
-                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300">
+                    <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300">
                       <Link href="#" className="flex items-center space-x-2">
                         <span>Read Full Article</span>
                         <ArrowRight className="w-4 h-4" />
@@ -478,12 +485,23 @@ export function ResourcesClient() {
                     </Button>
                   </div>
                   <div className="relative">
-                    <div className="aspect-video bg-gradient-to-br from-gray-800 to-gray-900 rounded-2xl flex items-center justify-center">
-                      <div className="text-center">
-                        <div className={`w-20 h-20 mx-auto mb-4 bg-gradient-to-br ${getColorClasses(featuredArticle.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                          <BookOpen className="w-10 h-10 text-white" />
+                    <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl p-4">
+                      <div className="relative rounded-2xl overflow-hidden">
+                        <Image
+                          src="/images/others/featured.png"
+                          alt="Featured Insight - Data Analytics and Business Intelligence"
+                          width={600}
+                          height={400}
+                          className="w-full h-auto object-cover rounded-2xl hover:scale-110 transition-transform duration-700"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                          <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                            <p className="text-sm font-semibold text-gray-900">Featured Insight</p>
+                            <p className="text-xs text-gray-600">Data Analytics & Business Intelligence</p>
+                          </div>
                         </div>
-                        <p className="text-white font-semibold">Article Preview</p>
                       </div>
                     </div>
                   </div>
@@ -504,7 +522,7 @@ export function ResourcesClient() {
                 onClick={() => setActiveFilter(filter.id)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 hover:scale-105 ${
                   activeFilter === filter.id
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-600 to-orange-600 text-white shadow-lg'
                     : 'bg-white text-gray-700 hover:bg-gray-50 border border-gray-200'
                 }`}
               >
@@ -519,8 +537,8 @@ export function ResourcesClient() {
       <section id="content" className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-10 right-10 w-24 h-24 bg-blue-100/20 rounded-full blur-2xl animate-float"></div>
-        <div className="absolute bottom-10 left-10 w-32 h-32 bg-purple-100/20 rounded-full blur-2xl animate-float delay-1000"></div>
-        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-cyan-100/20 rounded-full blur-2xl animate-float delay-500"></div>
+        <div className="absolute bottom-10 left-10 w-32 h-32 bg-slate-100/20 rounded-full blur-2xl animate-float delay-1000"></div>
+        <div className="absolute top-1/3 right-1/4 w-16 h-16 bg-blue-100/20 rounded-full blur-2xl animate-float delay-500"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -544,7 +562,7 @@ export function ResourcesClient() {
                 style={{animationDelay: `${index * 150}ms`}}
               >
                 {/* Hover background effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
                 <CardContent className="p-6 relative z-10">
                   <div className="flex items-start space-x-4 mb-4">
@@ -578,7 +596,7 @@ export function ResourcesClient() {
                           </div>
                           <div className="flex items-center space-x-1 group-hover:translate-x-1 transition-transform duration-300 delay-100">
                             <Calendar className="w-4 h-4" />
-                            <span>{'date' in item ? new Date(item.date).toLocaleDateString() : ''}</span>
+                            <span>{'date' in item ? new Date(item.date).toLocaleDateString('en-US', { year: 'numeric', month: 'numeric', day: 'numeric' }) : ''}</span>
                           </div>
                         </>
                       )}
@@ -623,8 +641,8 @@ export function ResourcesClient() {
       <section className="py-24 gradient-dark relative overflow-hidden">
         {/* Background particles */}
         <div className="absolute top-20 left-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-32 right-32 w-3 h-3 bg-purple-400/40 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-cyan-400/40 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-32 right-32 w-3 h-3 bg-slate-400/40 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute bottom-40 left-1/3 w-2 h-2 bg-green-400/40 rounded-full animate-particle-float delay-800"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -647,7 +665,7 @@ export function ResourcesClient() {
                   style={{animationDelay: `${index * 200}ms`}}
                 >
                   {/* Hover background effect */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-transparent to-slate-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                   
                   <CardContent className="p-8 text-center relative z-10">
                     <div className={`w-16 h-16 mx-auto mb-6 bg-gradient-to-br ${getColorClasses(tip.color)} rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg relative overflow-hidden`}>
@@ -672,8 +690,8 @@ export function ResourcesClient() {
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-20 left-20 w-40 h-40 bg-blue-100/30 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-20 w-32 h-32 bg-purple-100/30 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-cyan-100/30 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-32 h-32 bg-slate-100/30 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-24 h-24 bg-blue-100/30 rounded-full blur-3xl animate-float delay-500"></div>
         
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent animate-fade-in-up">
@@ -683,7 +701,7 @@ export function ResourcesClient() {
             Need a Demo? Explore our one-on-one walkthroughs and see how Plott Labs can transform your emergency response operations.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
-            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-xl group">
+            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-xl group">
               <Link href="/contact" className="flex items-center space-x-2">
                 <span>Request Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />

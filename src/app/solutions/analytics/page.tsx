@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart3, PieChart, TrendingUp, Calendar, Download, CheckCircle, Eye, Filter, Activity, Users, Phone } from "lucide-react";
@@ -12,23 +13,23 @@ export default function AnalyticsPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
         
         {/* Floating particles */}
-        <div className="absolute top-20 left-10 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float"></div>
+        <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
         <div className="absolute top-40 right-20 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
-        <div className="absolute top-60 right-40 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute bottom-32 left-20 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-60 right-40 w-3 h-3 bg-slate-400/60 rounded-full animate-particle-float delay-700"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="text-center lg:text-left animate-fade-in-left">
               <div className="flex items-center justify-center lg:justify-start mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-blue-600 rounded-2xl flex items-center justify-center mr-6 shadow-2xl animate-glow">
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-orange-600 rounded-2xl flex items-center justify-center mr-6 shadow-2xl animate-glow">
                   <BarChart3 className="w-10 h-10 text-white" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
                     Analytics &
                     <br />
-                    <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                       Reporting
                     </span>
                   </h1>
@@ -40,7 +41,7 @@ export default function AnalyticsPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
                   <Link href="/contact">Request Analytics Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
@@ -50,30 +51,37 @@ export default function AnalyticsPage() {
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-6 text-sm text-gray-300">
                 <div className="flex items-center space-x-2 glass rounded-full px-4 py-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
                   <span>Real-time Dashboards</span>
                 </div>
                 <div className="flex items-center space-x-2 glass rounded-full px-4 py-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
                   <span>Custom Reports</span>
                 </div>
                 <div className="flex items-center space-x-2 glass rounded-full px-4 py-2">
-                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  <CheckCircle className="w-4 h-4 text-blue-400" />
                   <span>Trend Analysis</span>
                 </div>
               </div>
             </div>
 
             <div className="animate-fade-in-right">
-              <div className="glass rounded-2xl border border-white/20 shadow-2xl p-6 hover:scale-105 transition-all duration-500">
-                <div className="aspect-video bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl p-4">
+                <div className="relative rounded-2xl overflow-hidden">
+                  <Image
+                    src="/images/analytics/hero.png"
+                    alt="Analytics Dashboard - Live Performance Metrics and Data Visualization"
+                    width={600}
+                    height={400}
+                    className="w-full h-auto object-cover rounded-2xl hover:scale-110 transition-transform duration-700"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-green-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl animate-float">
-                      <BarChart3 className="w-12 h-12 text-white" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 hover:opacity-100 transition-opacity duration-500">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-lg p-3">
+                      <p className="text-sm font-semibold text-gray-900">Analytics Dashboard</p>
+                      <p className="text-xs text-gray-600">Live Performance Metrics & Data Visualization</p>
                     </div>
-                    <p className="text-2xl font-bold text-white mb-2">Analytics Dashboard</p>
-                    <p className="text-gray-300">Live Performance Metrics</p>
                   </div>
                 </div>
               </div>
@@ -84,19 +92,19 @@ export default function AnalyticsPage() {
 
       {/* Key Features */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/10 via-transparent to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
 
         {/* Background particles */}
-        <div className="absolute top-40 left-20 w-2 h-2 bg-green-400/40 rounded-full animate-particle-float"></div>
+        <div className="absolute top-40 left-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float"></div>
         <div className="absolute bottom-32 right-32 w-3 h-3 bg-blue-400/40 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-60 right-20 w-2 h-2 bg-cyan-400/40 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-60 right-20 w-2 h-2 bg-blue-400/40 rounded-full animate-particle-float delay-500"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
             <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
               Comprehensive Analytics.
               <br />
-              <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 Actionable Insights.
               </span>
             </h2>
@@ -107,12 +115,12 @@ export default function AnalyticsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="glass border border-white/10 rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up delay-100 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
-                  <BarChart3 className="w-8 h-8 text-green-400 group-hover:animate-pulse" />
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+                  <BarChart3 className="w-8 h-8 text-blue-400 group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-green-400 transition-colors duration-300">Configurable Dashboards</h3>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Configurable Dashboards</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">Create custom dashboards with drag-and-drop widgets tailored to your agency's key performance indicators.</p>
                 <ul className="space-y-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   <li>• Drag-and-drop dashboard builder</li>
@@ -141,12 +149,12 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="glass border border-white/10 rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up delay-300 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
-                  <TrendingUp className="w-8 h-8 text-cyan-400 group-hover:animate-pulse" />
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+                  <TrendingUp className="w-8 h-8 text-blue-400 group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300">Performance Trend Analysis</h3>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">Performance Trend Analysis</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">Identify patterns and trends in your operational data to make informed strategic decisions.</p>
                 <ul className="space-y-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   <li>• Historical data analysis</li>
@@ -158,12 +166,12 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="glass border border-white/10 rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up delay-400 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-purple-500/20 to-purple-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
-                  <PieChart className="w-8 h-8 text-purple-400 group-hover:animate-pulse" />
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-slate-500/20 to-slate-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+                  <PieChart className="w-8 h-8 text-slate-400 group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Key Performance Indicators</h3>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-slate-400 transition-colors duration-300">Key Performance Indicators</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">Monitor critical metrics like response times, unit utilization, and case resolution rates.</p>
                 <ul className="space-y-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   <li>• Response time tracking</li>
@@ -192,12 +200,12 @@ export default function AnalyticsPage() {
             </div>
 
             <div className="glass border border-white/10 rounded-2xl p-6 text-center hover:shadow-2xl transition-all duration-500 hover:scale-105 hover:-translate-y-3 animate-fade-in-up delay-600 group relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <div className="relative z-10">
-                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-pink-500/20 to-pink-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
-                  <Filter className="w-8 h-8 text-pink-400 group-hover:animate-pulse" />
+                <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-orange-500/20 to-orange-600/20 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+                  <Filter className="w-8 h-8 text-orange-400 group-hover:animate-pulse" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors duration-300">Advanced Data Filtering</h3>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-300">Advanced Data Filtering</h3>
                 <p className="text-gray-400 group-hover:text-gray-300 transition-colors duration-300 mb-4">Drill down into your data with sophisticated filtering and search capabilities.</p>
                 <ul className="space-y-2 text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
                   <li>• Multi-criteria filtering</li>
@@ -228,7 +236,7 @@ export default function AnalyticsPage() {
             <div className="bg-gradient-to-r from-slate-800 to-slate-900 px-6 py-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
                     <BarChart3 className="w-4 h-4 text-white" />
                   </div>
                   <div>
@@ -237,8 +245,8 @@ export default function AnalyticsPage() {
                   </div>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-xs font-medium">LIVE</span>
+                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                  <span className="text-blue-400 text-xs font-medium">LIVE</span>
                 </div>
               </div>
             </div>
@@ -246,16 +254,16 @@ export default function AnalyticsPage() {
             <div className="p-8">
               <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
                 {/* KPI Cards */}
-                <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
                       <Activity className="w-5 h-5 text-white" />
                     </div>
-                    <TrendingUp className="w-4 h-4 text-green-600" />
+                    <TrendingUp className="w-4 h-4 text-blue-600" />
                   </div>
-                  <div className="text-2xl font-bold text-green-900 mb-1">24</div>
-                  <p className="text-green-700 text-sm font-medium">Active Incidents</p>
-                  <p className="text-green-600 text-xs mt-1">+3 from yesterday</p>
+                  <div className="text-2xl font-bold text-blue-900 mb-1">24</div>
+                  <p className="text-blue-700 text-sm font-medium">Active Incidents</p>
+                  <p className="text-blue-600 text-xs mt-1">+3 from yesterday</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-6 border border-blue-200">
@@ -270,16 +278,16 @@ export default function AnalyticsPage() {
                   <p className="text-blue-600 text-xs mt-1">Above average</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-xl p-6 border border-purple-200">
+                <div className="bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-6 border border-slate-200">
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 bg-purple-500 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-slate-500 rounded-lg flex items-center justify-center">
                       <Phone className="w-5 h-5 text-white" />
                     </div>
-                    <TrendingUp className="w-4 h-4 text-purple-600" />
+                    <TrendingUp className="w-4 h-4 text-slate-600" />
                   </div>
-                  <div className="text-2xl font-bold text-purple-900 mb-1">156</div>
-                  <p className="text-purple-700 text-sm font-medium">Call Volume</p>
-                  <p className="text-purple-600 text-xs mt-1">Today so far</p>
+                  <div className="text-2xl font-bold text-slate-900 mb-1">156</div>
+                  <p className="text-slate-700 text-sm font-medium">Call Volume</p>
+                  <p className="text-slate-600 text-xs mt-1">Today so far</p>
                 </div>
 
                 <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-xl p-6 border border-orange-200">
@@ -308,16 +316,16 @@ export default function AnalyticsPage() {
                 
                 <div className="h-64 flex items-end justify-between space-x-2 mb-4">
                   {/* Chart Bars */}
-                  <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t-sm h-32 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-32 opacity-80"></div>
                   <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-40 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t-sm h-36 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-purple-400 to-purple-300 rounded-t-sm h-48 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-36 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-slate-400 to-slate-300 rounded-t-sm h-48 opacity-80"></div>
                   <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-28 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t-sm h-44 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-cyan-400 to-cyan-300 rounded-t-sm h-52 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-green-400 to-green-300 rounded-t-sm h-38 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-44 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-52 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-38 opacity-80"></div>
                   <div className="flex-1 bg-gradient-to-t from-blue-400 to-blue-300 rounded-t-sm h-42 opacity-80"></div>
-                  <div className="flex-1 bg-gradient-to-t from-purple-400 to-purple-300 rounded-t-sm h-35 opacity-80"></div>
+                  <div className="flex-1 bg-gradient-to-t from-slate-400 to-slate-300 rounded-t-sm h-35 opacity-80"></div>
                 </div>
 
                 <div className="flex justify-between text-xs text-gray-500 border-t border-gray-200 pt-4">
@@ -337,7 +345,7 @@ export default function AnalyticsPage() {
 
       {/* Benefits Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-green-900/20 via-transparent to-blue-900/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 via-transparent to-blue-900/20"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -353,11 +361,11 @@ export default function AnalyticsPage() {
             <div className="glass rounded-2xl p-8 border border-white/10 animate-fade-in-left">
               <div className="space-y-6 mb-8">
                 <div className="flex items-start space-x-4 animate-fade-in-up delay-100 group">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Eye className="w-6 h-6 text-green-400 group-hover:animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Eye className="w-6 h-6 text-blue-400 group-hover:animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-white mb-2 group-hover:text-green-400 transition-colors duration-300">Real-time Visibility</h3>
+                    <h3 className="font-semibold text-lg text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">Real-time Visibility</h3>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Get instant insights into current operations with live dashboards and real-time metrics.</p>
                   </div>
                 </div>
@@ -373,19 +381,19 @@ export default function AnalyticsPage() {
                 </div>
 
                 <div className="flex items-start space-x-4 animate-fade-in-up delay-300 group">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-cyan-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                    <Calendar className="w-6 h-6 text-cyan-400 group-hover:animate-pulse" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-600/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Calendar className="w-6 h-6 text-blue-400 group-hover:animate-pulse" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-lg text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300">Compliance Assurance</h3>
+                    <h3 className="font-semibold text-lg text-white mb-2 group-hover:text-blue-400 transition-colors duration-300">Compliance Assurance</h3>
                     <p className="text-gray-300 group-hover:text-gray-200 transition-colors duration-300">Maintain regulatory compliance with automated reporting and audit trail documentation.</p>
                   </div>
                 </div>
               </div>
 
               <div className="grid grid-cols-2 gap-6">
-                <div className="glass bg-gradient-to-br from-green-500/10 to-green-600/10 rounded-lg p-4 text-center border border-green-400/20 hover:scale-105 transition-transform duration-300">
-                  <div className="text-2xl font-bold text-green-400 mb-1">30%</div>
+                <div className="glass bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-lg p-4 text-center border border-blue-400/20 hover:scale-105 transition-transform duration-300">
+                  <div className="text-2xl font-bold text-blue-400 mb-1">30%</div>
                   <div className="text-sm text-gray-300">Efficiency Improvement</div>
                 </div>
                 <div className="glass bg-gradient-to-br from-blue-500/10 to-blue-600/10 rounded-lg p-4 text-center border border-blue-400/20 hover:scale-105 transition-transform duration-300">
@@ -402,7 +410,7 @@ export default function AnalyticsPage() {
                   <div className="text-center relative z-10">
                     <div className="grid grid-cols-2 gap-4 max-w-md mx-auto mb-6">
                       <div className="glass rounded-xl p-4 shadow-md hover:scale-110 transition-transform duration-300 group">
-                        <BarChart3 className="w-8 h-8 text-green-400 mx-auto mb-2 group-hover:animate-pulse" />
+                        <BarChart3 className="w-8 h-8 text-blue-400 mx-auto mb-2 group-hover:animate-pulse" />
                         <div className="text-xs font-medium text-white">Charts</div>
                       </div>
                       <div className="glass rounded-xl p-4 shadow-md hover:scale-110 transition-transform duration-300 group">
@@ -410,7 +418,7 @@ export default function AnalyticsPage() {
                         <div className="text-xs font-medium text-white">Analysis</div>
                       </div>
                       <div className="glass rounded-xl p-4 shadow-md hover:scale-110 transition-transform duration-300 group">
-                        <TrendingUp className="w-8 h-8 text-purple-400 mx-auto mb-2 group-hover:animate-pulse" />
+                        <TrendingUp className="w-8 h-8 text-slate-400 mx-auto mb-2 group-hover:animate-pulse" />
                         <div className="text-xs font-medium text-white">Trends</div>
                       </div>
                       <div className="glass rounded-xl p-4 shadow-md hover:scale-110 transition-transform duration-300 group">
@@ -439,7 +447,7 @@ export default function AnalyticsPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
             Unlock the Power of Your
-            <span className="bg-gradient-to-r from-green-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent block">
               Data Analytics
             </span>
           </h2>

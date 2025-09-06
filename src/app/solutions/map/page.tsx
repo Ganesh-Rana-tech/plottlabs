@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { MapPin, Layers, Cloud, Navigation, Zap, CheckCircle, Eye, Satellite, Globe, Shield, Activity } from "lucide-react";
@@ -19,23 +20,23 @@ export default function MapPage() {
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
         
         {/* Floating particles */}
-        <div className="absolute top-20 left-10 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float"></div>
+        <div className="absolute top-20 left-10 w-3 h-3 bg-slate-400/60 rounded-full animate-particle-float"></div>
         <div className="absolute top-40 right-20 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-1000"></div>
         <div className="absolute bottom-32 left-20 w-4 h-4 bg-green-400/60 rounded-full animate-particle-float delay-500"></div>
-        <div className="absolute top-60 right-40 w-3 h-3 bg-cyan-400/60 rounded-full animate-particle-float delay-700"></div>
+        <div className="absolute top-60 right-40 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float delay-700"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="text-center lg:text-left animate-fade-in-left">
               <div className="flex items-center justify-center lg:justify-start mb-8">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mr-6 shadow-2xl animate-glow">
+                <div className="w-20 h-20 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mr-6 shadow-2xl animate-glow">
                   <MapPin className="w-10 h-10 text-white" />
                 </div>
                 <div>
                   <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
                     Interactive
                     <br />
-                    <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-slate-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                       Incident Mapping
                     </span>
                   </h1>
@@ -47,7 +48,7 @@ export default function MapPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-slate-600 to-orange-600 hover:from-slate-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
                   <Link href="/contact">See Map in Action</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
@@ -73,21 +74,16 @@ export default function MapPage() {
 
             <div className="animate-fade-in-right">
               <div className="glass rounded-2xl border border-white/20 shadow-2xl p-6 hover:scale-105 transition-all duration-500">
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center shadow-2xl animate-float">
-                      <MapPin className="w-12 h-12 text-white" />
-                    </div>
-                    <p className="text-2xl font-bold text-white mb-2">Interactive Map</p>
-                    <p className="text-gray-300">Real-Time Incident Visualization</p>
-                    {/* Map points animation */}
-                    <div className="flex justify-center space-x-4 mt-6">
-                      <div className="w-3 h-3 bg-red-400 rounded-full animate-pulse"></div>
-                      <div className="w-3 h-3 bg-yellow-400 rounded-full animate-pulse delay-200"></div>
-                      <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse delay-400"></div>
-                    </div>
-                  </div>
+                <div className="aspect-[4/3] rounded-xl relative overflow-hidden">
+                  <Image
+                    src="/images/map/map-hero-image.png"
+                    alt="PlottLabs Interactive Incident Mapping Interface"
+                    fill
+                    className="object-cover rounded-xl"
+                    priority
+                  />
+                  {/* Overlay for better text readability if needed */}
+                  <div className="absolute inset-0 bg-black/10 rounded-xl"></div>
                 </div>
               </div>
             </div>
@@ -97,14 +93,14 @@ export default function MapPage() {
 
       {/* Real-world Use Case */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/10 via-transparent to-blue-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Visualizing Incidents Across
               <br />
-              <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-slate-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                 an Airport Campus
               </span>
             </h2>
@@ -114,24 +110,29 @@ export default function MapPage() {
           </div>
           
           <div className="glass rounded-2xl border border-white/10 p-8 mb-16 animate-scale-in delay-500">
-            <div className="aspect-video bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-              <div className="relative z-10 text-center">
-                <div className="grid grid-cols-3 gap-8 max-w-lg mx-auto mb-8">
-                  <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float">
-                    <div className="w-3 h-3 bg-red-400 rounded-full mx-auto mb-2 animate-pulse"></div>
-                    <p className="text-xs text-white font-medium">Active Incidents</p>
-                  </div>
-                  <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float delay-200">
-                    <div className="w-3 h-3 bg-yellow-400 rounded-full mx-auto mb-2 animate-pulse delay-200"></div>
-                    <p className="text-xs text-white font-medium">Weather Alerts</p>
-                  </div>
-                  <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float delay-400">
-                    <div className="w-3 h-3 bg-green-400 rounded-full mx-auto mb-2 animate-pulse delay-400"></div>
-                    <p className="text-xs text-white font-medium">Resources</p>
-                  </div>
-                </div>
-                <p className="text-xl font-semibold text-white">Live Airport Campus View</p>
+            <div className="aspect-video bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl relative overflow-hidden">
+              {/* Map Background with Grid */}
+              <div className="absolute inset-0 bg-gradient-to-br from-green-900/40 via-blue-900/30 to-slate-800/50"></div>
+              <div className="absolute inset-0 opacity-30">
+                <div className="w-full h-full" style={{
+                  backgroundImage: `
+                    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+                  `,
+                  backgroundSize: '30px 30px'
+                }}></div>
+              </div>
+              
+              {/* Airport Campus Map */}
+              <div className="absolute inset-4 rounded-lg overflow-hidden">
+                <Image
+                  src="/images/map/airpot-map.png"
+                  alt="Airport Terminal Campus Emergency Response Map"
+                  fill
+                  className="object-cover rounded-lg"
+                />
+                {/* Subtle overlay for better integration */}
+                <div className="absolute inset-0 bg-black/5 rounded-lg"></div>
               </div>
             </div>
           </div>
@@ -152,22 +153,22 @@ export default function MapPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-100 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Satellite className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Aerial Views</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-slate-600 transition-colors duration-300">Aerial Views</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Access the latest satellite and aerial imagery with multiple overlay options for enhanced visibility.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Sub-meter resolution imagery</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Multiple map layer options</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Historical imagery comparison</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />3D terrain visualization</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Sub-meter resolution imagery</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Multiple map layer options</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Historical imagery comparison</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />3D terrain visualization</li>
                 </ul>
               </CardContent>
             </Card>
@@ -215,64 +216,64 @@ export default function MapPage() {
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-400 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Layers className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">Hazard Visualization</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Hazard Visualization</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Visualize critical infrastructure, hazardous materials, and emergency resources on demand.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Critical infrastructure overlay</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Hazmat facility locations</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Emergency resource mapping</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Custom layer creation</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Critical infrastructure overlay</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Hazmat facility locations</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Emergency resource mapping</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Custom layer creation</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-500 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Navigation className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Smart Routing</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-slate-600 transition-colors duration-300">Smart Routing</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Intelligent routing that considers traffic, weather, and emergency vehicle priority.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Emergency vehicle routing</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Multi-stop optimization</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Dynamic route adjustment</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Turn-by-turn navigation</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Emergency vehicle routing</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Multi-stop optimization</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Dynamic route adjustment</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Turn-by-turn navigation</li>
                 </ul>
               </CardContent>
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-600 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-pink-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-pink-500 to-pink-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Eye className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-pink-600 transition-colors duration-300">Custom Visualization</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-orange-600 transition-colors duration-300">Custom Visualization</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Create custom overlays and visualizations for agency-specific data and operations.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-pink-600 mr-3 flex-shrink-0" />Custom overlay creation</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-pink-600 mr-3 flex-shrink-0" />Data import capabilities</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-pink-600 mr-3 flex-shrink-0" />Heat map generation</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-pink-600 mr-3 flex-shrink-0" />Statistical visualization</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-orange-600 mr-3 flex-shrink-0" />Custom overlay creation</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-orange-600 mr-3 flex-shrink-0" />Data import capabilities</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-orange-600 mr-3 flex-shrink-0" />Heat map generation</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-orange-600 mr-3 flex-shrink-0" />Statistical visualization</li>
                 </ul>
               </CardContent>
             </Card>
@@ -282,7 +283,7 @@ export default function MapPage() {
 
       {/* Visual Mockup Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900/10 via-transparent to-blue-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -290,7 +291,7 @@ export default function MapPage() {
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
                 Enhanced
                 <br />
-                <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-slate-400 via-orange-400 to-blue-400 bg-clip-text text-transparent">
                   Situational Awareness
                 </span>
               </h2>
@@ -300,11 +301,11 @@ export default function MapPage() {
 
               <div className="space-y-8 mb-10">
                 <div className="flex items-start space-x-4 group">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-8 h-8 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-xl text-white mb-3 group-hover:text-purple-400 transition-colors duration-300">Real-Time Incident Visualization</h3>
+                    <h3 className="font-semibold text-xl text-white mb-3 group-hover:text-slate-400 transition-colors duration-300">Real-Time Incident Visualization</h3>
                     <p className="text-gray-300 leading-relaxed">See all active incidents plotted on the map with real-time status updates and resource assignments.</p>
                   </div>
                 </div>
@@ -333,20 +334,112 @@ export default function MapPage() {
 
             <div className="animate-fade-in-right">
               <div className="glass rounded-2xl border border-white/10 shadow-2xl p-8 hover:scale-105 transition-all duration-500">
-                <div className="aspect-[4/3] bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  <div className="text-center relative z-10">
-                    <div className="relative mb-8">
-                      <div className="w-32 h-32 bg-gradient-to-br from-purple-500 to-pink-600 rounded-2xl mx-auto flex items-center justify-center shadow-2xl animate-float">
-                        <MapPin className="w-16 h-16 text-white" />
+                <div className="aspect-[4/3] bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl relative overflow-hidden">
+                  {/* Map Background */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-green-900/30 via-blue-900/20 to-slate-800/40"></div>
+                  
+                  {/* Map Grid */}
+                  <div className="absolute inset-0 opacity-20">
+                    <div className="w-full h-full" style={{
+                      backgroundImage: `
+                        linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)
+                      `,
+                      backgroundSize: '25px 25px'
+                    }}></div>
+                  </div>
+                  
+                  {/* Simulated Live Map Interface */}
+                  <div className="absolute inset-4 bg-white/5 rounded-lg border border-white/10">
+                    {/* Top Status Bar */}
+                    <div className="absolute top-2 left-2 right-2 h-8 bg-black/30 rounded flex items-center px-3">
+                      <div className="flex items-center space-x-2">
+                        <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-200"></div>
+                        <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-400"></div>
                       </div>
-                      <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-400 rounded-full animate-pulse"></div>
-                      <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-red-400 rounded-full animate-pulse delay-500"></div>
-                      <div className="absolute -top-2 -left-2 w-6 h-6 bg-blue-400 rounded-full animate-pulse delay-1000"></div>
-                      <div className="absolute top-1/2 -right-4 w-4 h-4 bg-yellow-400 rounded-full animate-pulse delay-300"></div>
+                      <div className="flex-1 text-center text-xs text-white/80 font-semibold">Live Emergency Response Map</div>
+                      <div className="w-4 h-4 bg-white/20 rounded"></div>
                     </div>
-                    <p className="text-xl font-semibold text-white mb-2">Live Map Interface</p>
-                    <p className="text-gray-300">Real-time incident tracking</p>
+                    
+                    {/* Left Control Panel */}
+                    <div className="absolute left-2 top-12 bottom-2 w-20 bg-black/20 rounded flex flex-col items-center py-3 space-y-3">
+                      <div className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                        <span className="text-xs">📱</span>
+                      </div>
+                      <div className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                        <span className="text-xs">📞</span>
+                      </div>
+                      <div className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
+                        <span className="text-xs">📍</span>
+                      </div>
+                    </div>
+                    
+                    {/* Main Map Area */}
+                    <div className="absolute left-24 top-12 right-2 bottom-2 bg-gradient-to-br from-green-800/30 to-blue-800/30 rounded">
+                      {/* Simulated Street Grid */}
+                      <div className="absolute inset-0">
+                        <div className="absolute top-1/4 left-0 right-0 h-px bg-white/30"></div>
+                        <div className="absolute top-1/2 left-0 right-0 h-px bg-white/30"></div>
+                        <div className="absolute top-3/4 left-0 right-0 h-px bg-white/30"></div>
+                        <div className="absolute left-1/4 top-0 bottom-0 w-px bg-white/30"></div>
+                        <div className="absolute left-1/2 top-0 bottom-0 w-px bg-white/30"></div>
+                        <div className="absolute left-3/4 top-0 bottom-0 w-px bg-white/30"></div>
+                      </div>
+                      
+                      {/* Incident Markers with Realistic Icons */}
+                      <div className="absolute top-1/4 left-1/3 w-5 h-5 bg-red-500 rounded-full animate-pulse shadow-lg flex items-center justify-center">
+                        <span className="text-xs text-white">🚒</span>
+                      </div>
+                      <div className="absolute top-1/2 right-1/3 w-5 h-5 bg-yellow-500 rounded-full animate-pulse delay-500 shadow-lg flex items-center justify-center">
+                        <span className="text-xs text-white">⚠️</span>
+                      </div>
+                      <div className="absolute bottom-1/4 left-1/2 w-5 h-5 bg-green-500 rounded-full animate-pulse delay-1000 shadow-lg flex items-center justify-center">
+                        <span className="text-xs text-white">🚑</span>
+                      </div>
+                      <div className="absolute top-1/3 right-1/4 w-4 h-4 bg-blue-500 rounded-full animate-bounce shadow-lg flex items-center justify-center">
+                        <span className="text-xs text-white">👮</span>
+                      </div>
+                      
+                      {/* Area Highlight */}
+                      <div className="absolute top-1/4 left-1/3 w-1/3 h-1/3 border-2 border-red-400 border-dashed rounded-lg animate-pulse"></div>
+                      
+                      {/* Response Route Lines */}
+                      <div className="absolute top-1/4 left-1/6 w-1/2 h-px bg-blue-400 animate-pulse"></div>
+                      <div className="absolute top-1/2 left-1/4 w-1/3 h-px bg-green-400 animate-pulse delay-300"></div>
+                      
+                      {/* Coordinates Display */}
+                      <div className="absolute bottom-2 right-2 text-xs text-white/60 bg-black/40 px-2 py-1 rounded">
+                        Lat: 38.9072 Long: -77.0369
+                      </div>
+                    </div>
+                    
+                    {/* Right Overlay Panel */}
+                    <div className="absolute right-2 top-12 bottom-2 w-36 bg-black/20 rounded p-3">
+                      <div className="text-xs text-white/80 mb-3 font-semibold">Live Overlays</div>
+                      <div className="space-y-2 text-xs">
+                        <div className="flex items-center justify-between text-white/60">
+                          <span>Fire Stations</span>
+                          <div className="w-2 h-2 bg-red-400 rounded-full animate-pulse"></div>
+                        </div>
+                        <div className="flex items-center justify-between text-white/60">
+                          <span>Police Units</span>
+                          <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-200"></div>
+                        </div>
+                        <div className="flex items-center justify-between text-white/60">
+                          <span>EMS Units</span>
+                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse delay-400"></div>
+                        </div>
+                        <div className="flex items-center justify-between text-white/60">
+                          <span>Weather</span>
+                          <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-600"></div>
+                        </div>
+                        <div className="flex items-center justify-between text-white/60">
+                          <span>Traffic</span>
+                          <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -366,7 +459,7 @@ export default function MapPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
             Transform Your
-            <span className="bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r from-slate-400 via-orange-400 to-blue-400 bg-clip-text text-transparent block">
               Situational Awareness
             </span>
           </h2>

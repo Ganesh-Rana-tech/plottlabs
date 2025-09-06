@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Clock, Users, MapPin, Phone, CheckCircle, ArrowRight, Zap, Database, Headphones, Lock, Activity, Globe } from "lucide-react";
@@ -20,8 +21,8 @@ export default function CADPage() {
         
         {/* Floating particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-2 h-2 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-4 h-4 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
         
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 z-10">
@@ -35,7 +36,7 @@ export default function CADPage() {
                   <h1 className="text-4xl md:text-6xl font-bold text-white drop-shadow-2xl">
                     Computer-Aided
                     <br />
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                       Dispatch
                     </span>
                   </h1>
@@ -47,7 +48,7 @@ export default function CADPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+                <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
                   <Link href="/contact">Request CAD Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
@@ -72,15 +73,19 @@ export default function CADPage() {
             </div>
 
             <div className="animate-fade-in-right">
-              <div className="glass rounded-2xl border border-white/20 shadow-2xl p-6 hover:scale-105 transition-all duration-500">
-                <div className="aspect-video bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  <div className="relative z-10 text-center">
-                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl animate-float">
-                      <Shield className="w-12 h-12 text-white" />
-                    </div>
-                    <p className="text-2xl font-bold text-white mb-2">CAD Dashboard</p>
-                    <p className="text-gray-300">Live Incident Management Interface</p>
+              <div className="glass rounded-2xl border border-white/20 shadow-2xl p-4 hover:scale-105 transition-all duration-500 overflow-hidden group">
+                <div className="relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/cad/dashboard.png"
+                    alt="CAD Dashboard - Computer-Aided Dispatch Interface"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-2xl font-bold text-white mb-2 drop-shadow-2xl shadow-black/50">CAD Dashboard</p>
+                    <p className="text-gray-200 drop-shadow-xl shadow-black/40">Live Incident Management Interface</p>
                   </div>
                 </div>
               </div>
@@ -91,13 +96,13 @@ export default function CADPage() {
 
       {/* Problem Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
               Why Legacy 
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                 CAD Fails
               </span>
             </h2>
@@ -169,22 +174,22 @@ export default function CADPage() {
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-200 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-purple-600 transition-colors duration-300">Intelligent Resource Allocation</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-slate-600 transition-colors duration-300">Intelligent Resource Allocation</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Automatically assign the closest available resources based on location, availability, and expertise.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Smart resource assignment</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Availability tracking</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Skill-based routing</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-purple-600 mr-3 flex-shrink-0" />Load balancing across units</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Smart resource assignment</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Availability tracking</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Skill-based routing</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Load balancing across units</li>
                 </ul>
               </CardContent>
             </Card>
@@ -211,22 +216,22 @@ export default function CADPage() {
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-400 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <MapPin className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-cyan-600 transition-colors duration-300">Integrated Mapping</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-blue-600 transition-colors duration-300">Integrated Mapping</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Seamlessly integrated with our mapping platform for visual incident management and routing.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Visual incident plotting</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Turn-by-turn routing</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Hazard identification</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-cyan-600 mr-3 flex-shrink-0" />Geographic data overlay</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Visual incident plotting</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Turn-by-turn routing</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Hazard identification</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-blue-600 mr-3 flex-shrink-0" />Geographic data overlay</li>
                 </ul>
               </CardContent>
             </Card>
@@ -253,22 +258,22 @@ export default function CADPage() {
             </Card>
 
             <Card className="group hover:shadow-2xl transition-all duration-500 hover:scale-105 border-0 bg-white/80 backdrop-blur-sm animate-fade-in-up delay-600 overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               <CardHeader className="relative z-10">
-                <div className="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-slate-600 rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg">
                   <Globe className="w-8 h-8 text-white" />
                 </div>
-                <CardTitle className="text-2xl text-gray-900 group-hover:text-indigo-600 transition-colors duration-300">Legacy System Integration</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 group-hover:text-slate-600 transition-colors duration-300">Legacy System Integration</CardTitle>
                 <CardDescription className="text-lg leading-relaxed">
                   Connect with existing systems and databases without disrupting current operations.
                 </CardDescription>
               </CardHeader>
               <CardContent className="relative z-10">
                 <ul className="space-y-3 text-gray-700">
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />API-first architecture</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Legacy system bridges</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Data synchronization</li>
-                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-indigo-600 mr-3 flex-shrink-0" />Gradual migration support</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />API-first architecture</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Legacy system bridges</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Data synchronization</li>
+                  <li className="flex items-center"><CheckCircle className="w-4 h-4 text-slate-600 mr-3 flex-shrink-0" />Gradual migration support</li>
                 </ul>
               </CardContent>
             </Card>
@@ -278,7 +283,7 @@ export default function CADPage() {
 
       {/* Benefits Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -286,7 +291,7 @@ export default function CADPage() {
               <h2 className="text-4xl md:text-5xl font-bold mb-8 text-white">
                 Measurable Results
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent">
                   for Your Agency
                 </span>
               </h2>
@@ -296,11 +301,11 @@ export default function CADPage() {
 
               <div className="grid grid-cols-2 gap-6 mb-10">
                 <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-2">25%</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-orange-500 bg-clip-text text-transparent mb-2">25%</div>
                   <div className="text-sm text-gray-300">Faster Response Times</div>
                 </div>
                 <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-100">
-                  <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">40%</div>
+                  <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">40%</div>
                   <div className="text-sm text-gray-300">Reduction in Errors</div>
                 </div>
                 <div className="glass rounded-2xl p-6 text-center hover:scale-105 transition-all duration-300 animate-glow delay-200">
@@ -313,38 +318,25 @@ export default function CADPage() {
                 </div>
               </div>
               
-              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
+              <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
                 <Link href="/contact">Get Your Results</Link>
               </Button>
             </div>
 
             <div className="animate-fade-in-right">
-              <div className="glass rounded-2xl border border-white/10 shadow-2xl p-8 hover:scale-105 transition-all duration-500">
-                <div className="aspect-square bg-gradient-to-br from-slate-900/50 to-slate-800/50 rounded-xl flex items-center justify-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-shimmer"></div>
-                  <div className="text-center relative z-10">
-                    <div className="grid grid-cols-2 gap-6 max-w-md mx-auto">
-                      <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float">
-                        <Clock className="w-10 h-10 text-blue-400 mx-auto mb-2" />
-                        <div className="text-sm font-medium text-white">Real-time</div>
-                        <div className="text-xs text-gray-400">Updates</div>
-                      </div>
-                      <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float delay-100">
-                        <Users className="w-10 h-10 text-purple-400 mx-auto mb-2" />
-                        <div className="text-sm font-medium text-white">Resource</div>
-                        <div className="text-xs text-gray-400">Allocation</div>
-                      </div>
-                      <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float delay-200">
-                        <Phone className="w-10 h-10 text-green-400 mx-auto mb-2" />
-                        <div className="text-sm font-medium text-white">ProQA</div>
-                        <div className="text-xs text-gray-400">Certified</div>
-                      </div>
-                      <div className="glass rounded-xl p-4 hover:scale-110 transition-all duration-300 animate-float delay-300">
-                        <Shield className="w-10 h-10 text-red-400 mx-auto mb-2" />
-                        <div className="text-sm font-medium text-white">Secure</div>
-                        <div className="text-xs text-gray-400">Platform</div>
-                      </div>
-                    </div>
+              <div className="glass rounded-2xl border border-white/10 shadow-2xl p-4 hover:scale-105 transition-all duration-500 overflow-hidden group max-w-lg mx-auto">
+                <div className="relative rounded-xl overflow-hidden">
+                  <Image
+                    src="/images/cad/performance.png"
+                    alt="CAD Performance Metrics - Measurable Results Dashboard"
+                    width={500}
+                    height={375}
+                    className="w-full h-auto object-cover rounded-xl"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute bottom-4 left-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    <p className="text-xl font-bold text-white mb-2 drop-shadow-2xl shadow-black/50">Performance Metrics</p>
+                    <p className="text-sm text-gray-200 drop-shadow-xl shadow-black/40">Real-time analytics and measurable results</p>
                   </div>
                 </div>
               </div>
@@ -364,7 +356,7 @@ export default function CADPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white relative z-10">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up">
             Ready to Transform Your
-            <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent block">
+            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent block">
               Dispatch Operations?
             </span>
           </h2>

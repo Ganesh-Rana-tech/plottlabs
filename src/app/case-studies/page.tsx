@@ -36,11 +36,11 @@ export default function CaseStudiesPage() {
   const getColorClasses = (color: string) => {
     const colors = {
       blue: "from-blue-500 to-blue-600",
-      purple: "from-purple-500 to-purple-600",
-      cyan: "from-cyan-500 to-cyan-600",
+      slate: "from-slate-500 to-slate-600",
+      blue: "from-blue-500 to-blue-600",
       green: "from-green-500 to-green-600",
       red: "from-red-500 to-red-600",
-      indigo: "from-indigo-500 to-indigo-600",
+      gray: "from-gray-500 to-gray-600",
       orange: "from-orange-500 to-orange-600"
     };
     return colors[color as keyof typeof colors] || colors.blue;
@@ -62,12 +62,12 @@ export default function CaseStudiesPage() {
         hoverText: "text-white",
         glow: "shadow-blue-500/25"
       },
-      purple: {
-        bg: "from-purple-100 to-purple-200",
-        hoverBg: "from-purple-500 to-purple-600",
-        text: "text-purple-600",
+      slate: {
+        bg: "from-slate-100 to-slate-200",
+        hoverBg: "from-slate-500 to-slate-600",
+        text: "text-slate-600",
         hoverText: "text-white",
-        glow: "shadow-purple-500/25"
+        glow: "shadow-slate-500/25"
       },
       green: {
         bg: "from-green-100 to-green-200",
@@ -76,12 +76,12 @@ export default function CaseStudiesPage() {
         hoverText: "text-white",
         glow: "shadow-green-500/25"
       },
-      indigo: {
-        bg: "from-indigo-100 to-indigo-200",
-        hoverBg: "from-indigo-500 to-indigo-600",
-        text: "text-indigo-600",
+      gray: {
+        bg: "from-gray-100 to-gray-200",
+        hoverBg: "from-gray-500 to-gray-600",
+        text: "text-gray-600",
         hoverText: "text-white",
-        glow: "shadow-indigo-500/25"
+        glow: "shadow-gray-500/25"
       },
       orange: {
         bg: "from-orange-100 to-orange-200",
@@ -97,9 +97,9 @@ export default function CaseStudiesPage() {
   const clientLogos = [
     { name: "Metro Fire Department", location: "California", icon: Flame, color: "red" },
     { name: "State Emergency Services", location: "Texas", icon: Phone, color: "blue" },
-    { name: "County Sheriff's Office", location: "Florida", icon: Shield, color: "purple" },
+    { name: "County Sheriff's Office", location: "Florida", icon: Shield, color: "slate" },
     { name: "Regional EMS", location: "New York", icon: Activity, color: "green" },
-    { name: "City Police Department", location: "Illinois", icon: Car, color: "indigo" },
+    { name: "City Police Department", location: "Illinois", icon: Car, color: "gray" },
     { name: "Rural Fire District", location: "Oregon", icon: Truck, color: "orange" }
   ];
 
@@ -128,7 +128,7 @@ export default function CaseStudiesPage() {
         agencies: "15+",
         incidents: "500+"
       },
-      color: "purple"
+      color: "slate"
     },
     {
       title: "County Sheriff's Office",
@@ -141,7 +141,7 @@ export default function CaseStudiesPage() {
         scalability: "Auto",
         costSavings: "$1.8M"
       },
-      color: "cyan"
+      color: "blue"
     }
   ];
 
@@ -165,14 +165,14 @@ export default function CaseStudiesPage() {
       location: "New Orleans, LA",
       snippet: "Real-time coordination during major weather events using mobile-first design.",
       image: "disaster-response",
-      color: "purple"
+      color: "slate"
     },
     {
       title: "Analytics-Driven Operations",
       location: "Seattle, WA",
       snippet: "Data insights that transformed emergency response planning and resource allocation.",
       image: "analytics",
-      color: "cyan"
+      color: "blue"
     }
   ];
 
@@ -211,13 +211,13 @@ export default function CaseStudiesPage() {
       icon: Cloud,
       title: "SaaS Flexibility & Scalability",
       description: "Automatic scaling during peak times and seamless updates without downtime",
-      color: "purple"
+      color: "slate"
     },
     {
       icon: Shield,
       title: "Secure & Compliant by Design",
       description: "Built-in DoD-level security and CJIS compliance from day one",
-      color: "cyan"
+      color: "blue"
     },
     {
       icon: TrendingUp,
@@ -237,16 +237,16 @@ export default function CaseStudiesPage() {
 
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-2 h-2 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
-        <div className="absolute bottom-40 right-60 w-4 h-4 bg-indigo-400/60 rounded-full animate-particle-float delay-300"></div>
-        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-cyan-400/60 rounded-full animate-particle-float delay-900"></div>
+        <div className="absolute bottom-40 right-60 w-4 h-4 bg-gray-400/60 rounded-full animate-particle-float delay-300"></div>
+        <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-900"></div>
 
         {/* Main gradient orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-slate-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float delay-500"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -254,7 +254,7 @@ export default function CaseStudiesPage() {
               <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-8">
                 <span className="text-white drop-shadow-2xl">Real Stories.</span>
                 <br />
-                <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent animate-gradient-x">
+                <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x">
                   Real Impact.
                 </span>
               </h1>
@@ -262,7 +262,7 @@ export default function CaseStudiesPage() {
                 See how agencies transformed response times and security outcomes with Plott Labs' cloud-native platform.
               </p>
               <div className="animate-fade-in-up delay-400">
-                <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 animate-glow">
+                <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/25 animate-glow">
                   <Link href="#featured-cases">Explore Case Studies</Link>
                 </Button>
               </div>
@@ -272,17 +272,17 @@ export default function CaseStudiesPage() {
               <div className="relative">
                 <div className="glass rounded-2xl border border-white/20 p-8 backdrop-blur-sm hover:scale-105 transition-all duration-500 animate-scale-in delay-700">
                   <div className="text-center">
-                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center shadow-2xl animate-glow">
+                    <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-blue-600 to-orange-600 rounded-2xl flex items-center justify-center shadow-2xl animate-glow">
                       <BarChart3 className="w-12 h-12 text-white animate-pulse" />
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-4">Success Metrics</h3>
                     <div className="grid grid-cols-2 gap-4 text-center">
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">40-60%</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-orange-500 bg-clip-text text-transparent">40-60%</div>
                         <div className="text-gray-300 text-sm">Faster Response</div>
                       </div>
                       <div>
-                        <div className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">99.9%</div>
+                        <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">99.9%</div>
                         <div className="text-gray-300 text-sm">Uptime</div>
                       </div>
                       <div>
@@ -355,8 +355,8 @@ export default function CaseStudiesPage() {
       <section id="featured-cases" className="py-24 gradient-dark relative overflow-hidden">
         {/* Background particles */}
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-400/30 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-1/2 right-10 w-2 h-2 bg-cyan-400/30 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-slate-400/30 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float delay-500"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-20 animate-fade-in-up">
@@ -427,12 +427,12 @@ export default function CaseStudiesPage() {
 
       {/* Case Study Preview Grid */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-purple-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-slate-50/30"></div>
 
         {/* Background particles */}
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-400/30 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-1/2 right-10 w-2 h-2 bg-cyan-400/30 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-slate-400/30 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float delay-500"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -489,8 +489,8 @@ export default function CaseStudiesPage() {
       <section className="py-24 gradient-dark relative overflow-hidden">
         {/* Background particles */}
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-400/30 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-1/2 right-10 w-2 h-2 bg-cyan-400/30 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-slate-400/30 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-green-400/30 rounded-full animate-particle-float delay-700"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -511,10 +511,10 @@ export default function CaseStudiesPage() {
                 style={{ animationDelay: `${index * 200}ms` }}
               >
                 <CardContent className="p-8 text-center relative overflow-hidden">
-                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-slate-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
                   <div className="relative z-10">
-                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
+                    <div className="w-16 h-16 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-orange-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300 animate-glow">
                       <Quote className="w-8 h-8 text-white group-hover:animate-pulse" />
                     </div>
 
@@ -543,12 +543,12 @@ export default function CaseStudiesPage() {
 
       {/* Key Benefits Summary */}
       <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-purple-50/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-slate-50/30"></div>
 
         {/* Background particles */}
         <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float"></div>
-        <div className="absolute bottom-20 right-20 w-3 h-3 bg-purple-400/30 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute top-1/2 right-10 w-2 h-2 bg-cyan-400/30 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute bottom-20 right-20 w-3 h-3 bg-slate-400/30 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute top-1/2 right-10 w-2 h-2 bg-blue-400/30 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-1/3 left-1/4 w-2 h-2 bg-green-400/30 rounded-full animate-particle-float delay-700"></div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -601,15 +601,15 @@ export default function CaseStudiesPage() {
 
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-4 h-4 bg-blue-400/60 rounded-full animate-particle-float"></div>
-        <div className="absolute top-40 right-20 w-3 h-3 bg-purple-400/60 rounded-full animate-particle-float delay-1000"></div>
-        <div className="absolute bottom-32 left-20 w-2 h-2 bg-cyan-400/60 rounded-full animate-particle-float delay-500"></div>
+        <div className="absolute top-40 right-20 w-3 h-3 bg-slate-400/60 rounded-full animate-particle-float delay-1000"></div>
+        <div className="absolute bottom-32 left-20 w-2 h-2 bg-blue-400/60 rounded-full animate-particle-float delay-500"></div>
         <div className="absolute top-60 right-40 w-3 h-3 bg-green-400/60 rounded-full animate-particle-float delay-700"></div>
         <div className="absolute bottom-40 right-60 w-4 h-4 bg-indigo-400/60 rounded-full animate-particle-float delay-300"></div>
 
         {/* Main gradient orbs */}
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
-        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl animate-float delay-500"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-slate-500/20 rounded-full blur-3xl animate-float delay-1000"></div>
+        <div className="absolute top-1/2 left-1/4 w-64 h-64 bg-blue-500/20 rounded-full blur-3xl animate-float delay-500"></div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white drop-shadow-2xl animate-fade-in-up">
@@ -619,7 +619,7 @@ export default function CaseStudiesPage() {
             Join the agencies already transforming emergency response with Plott Labs' cloud-native platform.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
-            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/25 animate-glow animate-pulse">
+            <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/25 animate-glow animate-pulse">
               <Link href="/contact">Start Your Transformation</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white hover:text-gray-900 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25 animate-glow">
