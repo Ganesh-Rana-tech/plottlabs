@@ -52,7 +52,6 @@ export default function IndustriesPage() {
     const colors = {
       blue: "from-blue-500 to-blue-600",
       slate: "from-slate-500 to-slate-600",
-      blue: "from-blue-500 to-blue-600",
       green: "from-green-500 to-green-600",
       red: "from-red-500 to-red-600",
       gray: "from-gray-500 to-gray-600",

@@ -110,7 +110,6 @@ const Navbar = () => {
     const colorMap = {
       blue: "text-blue-500",
       slate: "text-slate-500",
-      blue: "text-blue-500",
       green: "text-green-500"
     };
     return colorMap[color as keyof typeof colorMap] || "text-blue-500";
@@ -120,7 +119,6 @@ const Navbar = () => {
     const colorMap = {
       blue: "bg-blue-50",
       slate: "bg-slate-50",
-      blue: "bg-blue-50",
       green: "bg-green-50"
     };
     return colorMap[color as keyof typeof colorMap] || "bg-blue-50";

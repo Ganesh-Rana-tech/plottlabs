@@ -42,7 +42,6 @@ export default function AboutPage() {
     const colors = {
       blue: "from-blue-500 to-blue-600",
       slate: "from-slate-500 to-slate-600",
-      blue: "from-blue-500 to-blue-600",
       green: "from-green-500 to-green-600"
     };
     return colors[color as keyof typeof colors] || colors.blue;
