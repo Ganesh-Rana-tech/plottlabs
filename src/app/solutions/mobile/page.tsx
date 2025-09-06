@@ -409,7 +409,7 @@ export default function MobilePage() {
               <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl">
                 <div className="relative max-w-[280px] mx-auto p-2">
                   <Image
-                    src="/images/mobile/ab.png"
+                    src="/images/mobile/dashboard.png"
                     alt="Mobile Dashboard - Active Calls Management Interface"
                     width={280}
                     height={210}
