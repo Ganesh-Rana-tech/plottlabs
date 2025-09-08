@@ -49,7 +49,7 @@ export default function CADPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                  <Link href="/contact">Request CAD Demo</Link>
+                  <Link href="/contact#contact-form">Request CAD Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
                   <Link href="/solutions">View All Solutions</Link>
@@ -319,7 +319,7 @@ export default function CADPage() {
               </div>
               
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                <Link href="/contact">Get Your Results</Link>
+                <Link href="/contact#contact-form">Get Your Results</Link>
               </Button>
             </div>
 
@@ -365,10 +365,10 @@ export default function CADPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">Request CAD Demo</Link>
+              <Link href="/contact#contact-form">Request CAD Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              <Link href="/solutions/map">Explore Map Integration</Link>
+              <Link href="/pdf/cad-brochure.pdf" target="_blank" rel="noopener noreferrer">Download Brochure</Link>
             </Button>
           </div>
         </div>

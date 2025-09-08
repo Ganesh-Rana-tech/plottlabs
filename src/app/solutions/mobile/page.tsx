@@ -3,14 +3,14 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { 
-  Smartphone, 
-  Shield, 
-  Zap, 
-  Users, 
-  MapPin, 
-  Bell, 
-  Battery, 
+import {
+  Smartphone,
+  Shield,
+  Zap,
+  Users,
+  MapPin,
+  Bell,
+  Battery,
   Wifi,
   Signal,
   Calendar,
@@ -22,6 +22,7 @@ import {
   CheckCircle,
   Globe
 } from "lucide-react"
+import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'Mobile Application Solutions | Plott Labs - Field Operations & Emergency Response',
@@ -63,7 +64,7 @@ export default function MobilePage() {
                   Mobile Solutions
                 </Badge>
               </div>
-              
+
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 animate-fade-in-up delay-200">
                 <span className="text-white drop-shadow-2xl">
                   Field Operations in Your
@@ -73,20 +74,20 @@ export default function MobilePage() {
                   Pocket
                 </span>
               </h1>
-              
+
               <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl animate-fade-in-up delay-500 drop-shadow-lg">
-                Empower your field teams with advanced mobile applications designed for 
-                first responders, emergency management, and critical operations. 
-                Real-time communication, offline capabilities, and intuitive interfaces 
+                Empower your field teams with advanced mobile applications designed for
+                first responders, emergency management, and critical operations.
+                Real-time communication, offline capabilities, and intuitive interfaces
                 built for high-stakes environments.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-start mb-8 animate-fade-in-up delay-700">
                 <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
-                  Request Demo
+                  <Link href="/contact#contact-form">Request Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                  View Features
+                  <Link href="/solutions/mobile#key-features">View Features</Link>
                 </Button>
               </div>
 
@@ -123,7 +124,7 @@ export default function MobilePage() {
                           <Battery className="w-4 h-4" />
                         </div>
                       </div>
-                      
+
                       {/* App Interface */}
                       <div className="px-4 pb-4 h-full">
                         {/* Header */}
@@ -175,7 +176,7 @@ export default function MobilePage() {
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Home Indicator */}
                   <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 w-32 h-1 bg-slate-600 rounded-full"></div>
                 </div>
@@ -215,7 +216,7 @@ export default function MobilePage() {
               </span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              Every feature designed with the unique challenges of emergency response, 
+              Every feature designed with the unique challenges of emergency response,
               public safety, and field operations in mind.
             </p>
           </div>
@@ -231,7 +232,7 @@ export default function MobilePage() {
               },
               {
                 icon: Zap,
-                title: "Real-time Updates", 
+                title: "Real-time Updates",
                 description: "Instant incident notifications, status updates, and resource tracking. Push notifications with priority levels.",
                 color: "slate",
                 delay: "delay-200"
@@ -296,7 +297,7 @@ export default function MobilePage() {
               </h2>
               <div className="space-y-4 text-gray-600">
                 <p className="text-lg">
-                  Metro Fire Department deployed our mobile solution across 45 stations, 
+                  Metro Fire Department deployed our mobile solution across 45 stations,
                   enabling faster incident response and better coordination between units.
                 </p>
                 <div className="space-y-3">
@@ -314,7 +315,7 @@ export default function MobilePage() {
                 </div>
               </div>
               <Button className="bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 hover:scale-105 transition-all duration-300">
-                Read Full Case Study
+                <Link href="/case-studies#featured-cases">Read Full Case Study</Link>
               </Button>
             </div>
 
@@ -327,7 +328,7 @@ export default function MobilePage() {
                       Live Data
                     </Badge>
                   </div>
-                  
+
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-green-600 mb-2">3:42</div>
@@ -366,7 +367,7 @@ export default function MobilePage() {
       {/* Mobile Dashboard Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-purple-900/10"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-left">
@@ -399,9 +400,9 @@ export default function MobilePage() {
                   <div className="text-sm text-gray-300">Units Deployed</div>
                 </div>
               </div>
-              
+
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                View Dashboard Demo
+                <Link href="/contact#contact-form">View Dashboard Demo</Link>
               </Button>
             </div>
 
@@ -415,7 +416,7 @@ export default function MobilePage() {
                     height={210}
                     className="w-full h-auto object-cover rounded-xl"
                   />
-                  
+
                   {/* Floating Icons */}
                   <div className="absolute -top-4 -left-8 glass border border-white/10 p-3 rounded-2xl animate-float hover:scale-110 transition-transform duration-300">
                     <Users className="w-6 h-6 text-blue-400" />
@@ -436,7 +437,7 @@ export default function MobilePage() {
       {/* Mobile Map Section */}
       <section className="py-24 gradient-dark relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/10 via-transparent to-blue-900/10"></div>
-        
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="animate-fade-in-left">
@@ -449,7 +450,7 @@ export default function MobilePage() {
                     height={210}
                     className="w-full h-auto object-cover rounded-xl"
                   />
-                  
+
                   {/* Floating Icons */}
                   <div className="absolute -top-4 -left-8 glass border border-white/10 p-3 rounded-2xl animate-float hover:scale-110 transition-transform duration-300">
                     <MapPin className="w-6 h-6 text-blue-400" />
@@ -494,9 +495,9 @@ export default function MobilePage() {
                   <div className="text-sm text-gray-300">Arrival Time</div>
                 </div>
               </div>
-              
+
               <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                View Map Demo
+                <Link href="/contact#contact-form">View Map Demo</Link>
               </Button>
             </div>
           </div>
@@ -507,7 +508,7 @@ export default function MobilePage() {
       <section className="relative py-24 gradient-mesh animate-rotate-gradient overflow-hidden">
         <div className="absolute inset-0 bg-black/60"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/40"></div>
-        
+
         {/* Floating Particles */}
         <div className="absolute top-20 left-10 w-3 h-3 bg-blue-400/60 rounded-full animate-particle-float"></div>
         <div className="absolute bottom-20 right-20 w-2 h-2 bg-slate-400/60 rounded-full animate-particle-float delay-700"></div>
@@ -518,15 +519,15 @@ export default function MobilePage() {
             Ready to Deploy?
           </h2>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto drop-shadow-lg animate-fade-in-up delay-300">
-            See how our mobile platform can transform your field operations. 
+            See how our mobile platform can transform your field operations.
             Request a customized demo for your organization.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up delay-500">
             <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
-              Schedule Demo
+              <Link href="/contact#contact-form">Schedule Demo</Link>
             </Button>
             <Button variant="outline" size="lg" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              Download Brochure
+              <Link href="/pdf/mobile-brochure.pdf" target="_blank" rel="noopener noreferrer">Download Brochure</Link>
             </Button>
           </div>
         </div>

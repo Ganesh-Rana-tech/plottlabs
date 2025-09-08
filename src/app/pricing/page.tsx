@@ -88,7 +88,15 @@ export default function Pricing() {
               Flexible SaaS Pricing
             </span>
             <br />
-            <span className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x animate-fade-in-up delay-300">
+            <span 
+              className="bg-gradient-to-r from-blue-400 via-orange-400 to-blue-600 bg-clip-text text-transparent animate-gradient-x" 
+              style={{
+                WebkitBackgroundClip: 'text', 
+                WebkitTextFillColor: 'transparent',
+                backgroundSize: '200% 200%',
+                opacity: 1
+              }}
+            >
               For Every Agency
             </span>
           </h1>
@@ -99,7 +107,7 @@ export default function Pricing() {
       </section>
 
       {/* Pricing Plans */}
-      <section className="py-24 gradient-dark relative overflow-hidden">
+      <section className="py-24 gradient-dark relative overflow-hidden" id="pricing-plans">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-slate-900/10"></div>
 
         {/* Background particles */}
@@ -157,7 +165,7 @@ export default function Pricing() {
                     variant="outline"
                     size="lg"
                   >
-                    <Link href="/contact">{plan.cta}</Link>
+                    <Link href="/contact#contact-form">{plan.cta}</Link>
                   </Button>
                 </div>
               </div>
@@ -423,10 +431,10 @@ export default function Pricing() {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
               <Button size="lg" className="text-lg px-10 py-7 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-                <Link href="/contact">Request Custom Quote</Link>
+                <Link href="/contact#contact-form">Request Custom Quote</Link>
               </Button>
               <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-                <Link href="/contact">Schedule Demo</Link>
+                <Link href="/contact#schedule-meeting">Schedule Demo</Link>
               </Button>
             </div>
           </div>

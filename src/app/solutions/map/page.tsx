@@ -49,7 +49,7 @@ export default function MapPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-slate-600 to-orange-600 hover:from-slate-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                  <Link href="/contact">See Map in Action</Link>
+                  <Link href="/contact#contact-form">See Map in Action</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
                   <Link href="/solutions/cad">View CAD Integration</Link>
@@ -76,7 +76,7 @@ export default function MapPage() {
               <div className="glass rounded-2xl border border-white/20 shadow-2xl p-6 hover:scale-105 transition-all duration-500">
                 <div className="aspect-[4/3] rounded-xl relative overflow-hidden">
                   <Image
-                    src="/images/map/map-hero-image.png"
+                    src="/images/map/hero-section.png"
                     alt="PlottLabs Interactive Incident Mapping Interface"
                     fill
                     className="object-cover rounded-xl"
@@ -468,10 +468,10 @@ export default function MapPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">See Map in Action</Link>
+              <Link href="/contact#contact-form">See Map in Action</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              <Link href="/solutions/mobile">Explore Mobile Integration</Link>
+            <Link href="/pdf/map-brochure.pdf" target="_blank" rel="noopener noreferrer">Download Brochure</Link>
             </Button>
           </div>
         </div>

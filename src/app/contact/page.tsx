@@ -571,7 +571,7 @@ export default function Contact() {
       </section>
       
       {/* Executive Consultation */}
-      <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-slate-50 to-gray-100 relative overflow-hidden" id="schedule-meeting">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50/30 via-transparent to-slate-50/30"></div>
         
         {/* Background particles */}

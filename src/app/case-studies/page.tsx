@@ -619,7 +619,7 @@ export default function CaseStudiesPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/25 animate-glow animate-pulse">
-              <Link href="/contact">Start Your Transformation</Link>
+              <Link href="/contact#contact-form">Start Your Transformation</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white hover:text-gray-900 hover:scale-105 transition-all duration-300 hover:shadow-2xl hover:shadow-white/25 animate-glow">
               <Link href="/solutions">Explore Solutions</Link>

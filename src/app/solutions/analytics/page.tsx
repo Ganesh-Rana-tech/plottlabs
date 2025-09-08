@@ -42,7 +42,7 @@ export default function AnalyticsPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
                 <Button size="lg" className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 shadow-2xl">
-                  <Link href="/contact">Request Analytics Demo</Link>
+                  <Link href="/contact#contact-form">Request Analytics Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-8 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300">
                   <Link href="/solutions">View All Solutions</Link>
@@ -69,7 +69,7 @@ export default function AnalyticsPage() {
               <div className="glass rounded-2xl border border-white/20 shadow-2xl hover:shadow-3xl transition-all duration-500 hover:scale-105 transform backdrop-blur-xl p-4">
                 <div className="relative rounded-2xl overflow-hidden">
                   <Image
-                    src="/images/analytics/hero.png"
+                    src="/images/analytics/hero-section.png"
                     alt="Analytics Dashboard - Live Performance Metrics and Data Visualization"
                     width={600}
                     height={400}
@@ -456,7 +456,7 @@ export default function AnalyticsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-7 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">Request Analytics Demo</Link>
+              <Link href="/contact#contact-form">Request Analytics Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <Link href="/solutions">View Complete Platform</Link>

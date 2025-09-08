@@ -964,7 +964,7 @@ export default function IndustriesPage() {
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-700">
             <Button size="lg" className="text-lg px-10 py-7 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">Schedule Industry Demo</Link>
+              <Link href="/contact#schedule-meeting">Schedule Industry Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <Link href="/solutions">Explore All Solutions</Link>

@@ -271,7 +271,7 @@ export default function AboutPage() {
 
               <div className="mt-10">
                 <Button size="lg" className="bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300">
-                  <Link href="/contact">Join Our Mission</Link>
+                  <Link href="/contact#contact-form">Join Our Mission</Link>
                 </Button>
               </div>
             </div>
@@ -624,7 +624,7 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-xl">
-              <Link href="/contact">Schedule a Demo</Link>
+              <Link href="/contact#schedule-meeting">Schedule a Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 hover:scale-105 transition-all duration-300 hover:shadow-lg">
               <Link href="/solutions">Explore Solutions</Link>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin } from "lucide-react";
 
 const Footer = () => {
@@ -7,8 +8,16 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="space-y-4">
-            <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-orange-600 bg-clip-text text-transparent">
-              Plott Labs
+            <div className="flex items-center">
+              <Link href="/">
+                <Image
+                  src="/images/logos/plottlabs-logo.png"
+                  alt="Plott Labs Logo"
+                  width={120}
+                  height={40}
+                  className="h-10 w-auto cursor-pointer hover:opacity-80 transition-opacity duration-200"
+                />
+              </Link>
             </div>
             <p className="text-muted-foreground text-sm">
               Enterprise-Grade Incident Response, Delivered in the Cloud
@@ -20,7 +29,7 @@ const Footer = () => {
               <Link href="#" className="text-muted-foreground hover:text-foreground">
                 <Twitter className="h-5 w-5" />
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link href="https://www.linkedin.com/company/plottlabs" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground">
                 <Linkedin className="h-5 w-5" />
               </Link>
             </div>
@@ -87,12 +96,12 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                <Link href="/privacy" className="text-muted-foreground hover:text-foreground">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="#" className="text-muted-foreground hover:text-foreground">
+                <Link href="/terms" className="text-muted-foreground hover:text-foreground">
                   Terms of Service
                 </Link>
               </li>

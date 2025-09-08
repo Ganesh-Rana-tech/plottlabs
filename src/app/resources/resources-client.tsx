@@ -304,7 +304,7 @@ export function ResourcesClient() {
                   <Link href="#content">Explore Resources</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-xl animate-fade-in-up delay-400">
-                  <Link href="/contact">Get Demo</Link>
+                  <Link href="/contact#contact-form">Get Demo</Link>
                 </Button>
               </div>
             </div>
@@ -667,7 +667,7 @@ export function ResourcesClient() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-xl group">
-              <Link href="/contact" className="flex items-center space-x-2">
+              <Link href="/contact#contact-form" className="flex items-center space-x-2">
                 <span>Request Demo</span>
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
               </Link>

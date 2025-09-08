@@ -53,7 +53,7 @@ export default function OneNetPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8 animate-fade-in-up delay-500">
                 <Button size="lg" className="text-base px-8 py-5 bg-gradient-to-r from-blue-600 to-orange-600 hover:from-blue-700 hover:to-orange-700 hover:scale-105 transition-all duration-300 hover:shadow-2xl shadow-lg animate-glow">
-                  <Link href="/contact">Request OneNet Demo</Link>
+                  <Link href="/contact#contact-form">Request OneNet Demo</Link>
                 </Button>
                 <Button size="lg" variant="outline" className="text-base px-8 py-5 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
                   <Link href="/solutions">Explore Platform</Link>
@@ -382,7 +382,7 @@ export default function OneNetPage() {
               </div>
 
               <Button size="lg" className="w-full sm:w-auto hover:scale-105 transition-transform duration-300 hover:shadow-lg">
-                <Link href="/contact">Schedule Your Demo</Link>
+                <Link href="/contact#schedule-meeting">Schedule Your Demo</Link>
               </Button>
             </div>
 
@@ -431,7 +431,7 @@ export default function OneNetPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-7 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">Request OneNet Demo</Link>
+              <Link href="/contact#contact-form">Request OneNet Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-7 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
               <Link href="/solutions">Explore Platform Integration</Link>

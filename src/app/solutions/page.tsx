@@ -161,7 +161,7 @@ export default function SolutionsPage() {
                 </div>
                 <Button className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 group-hover:scale-105 transition-all duration-300 shadow-lg">
                   <Link href="/solutions/cad" className="flex items-center justify-center">
-                    Request CAD Demo <ArrowRight className="w-4 h-4 ml-2" />
+                    Explore CAD <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
@@ -205,7 +205,7 @@ export default function SolutionsPage() {
                 </div>
                 <Button variant="outline" className="w-full border-2 border-slate-600 text-slate-600 hover:bg-slate-50 group-hover:scale-105 transition-all duration-300">
                   <Link href="/solutions/map" className="flex items-center justify-center">
-                    See Map in Action <ArrowRight className="w-4 h-4 ml-2" />
+                    Explore Map <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
@@ -251,7 +251,7 @@ export default function SolutionsPage() {
                 </div>
                 <Button variant="outline" className="w-full border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50 group-hover:scale-105 transition-all duration-300">
                   <Link href="/solutions/mobile" className="flex items-center justify-center">
-                    Discover Mobile Access <ArrowRight className="w-4 h-4 ml-2" />
+                    Explore Mobile <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
@@ -295,7 +295,7 @@ export default function SolutionsPage() {
                 </div>
                 <Button variant="outline" className="w-full border-2 border-green-600 text-green-600 hover:bg-green-50 group-hover:scale-105 transition-all duration-300">
                   <Link href="/solutions/analytics" className="flex items-center justify-center">
-                    Request Analytics Demo <ArrowRight className="w-4 h-4 ml-2" />
+                    Explore Analytics <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
                 </Button>
               </CardContent>
@@ -324,10 +324,10 @@ export default function SolutionsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
             <Button size="lg" className="text-lg px-10 py-6 bg-white text-gray-900 hover:bg-gray-100 hover:scale-105 transition-all duration-300 hover:shadow-2xl font-semibold">
-              <Link href="/contact">Schedule Comprehensive Demo</Link>
+              <Link href="/contact#schedule-meeting">Schedule Comprehensive Demo</Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-10 py-6 border-2 border-white/30 text-white hover:bg-white/10 glass hover:scale-105 transition-all duration-300 hover:shadow-2xl">
-              <Link href="/pricing">View Pricing</Link>
+              <Link href="/pricing#pricing-plans">View Pricing</Link>
             </Button>
           </div>
         </div>
